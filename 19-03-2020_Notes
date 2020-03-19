@@ -1,0 +1,44 @@
+Eraser : It earses a portion of the picture by using specified eraser size.
+
+Gradient: It fills a color with selected shades of colors.
+
+Paint Bucket: It fills a specific color into the selected
+	      area.
+
+Type Tools:
+ a) Horizontal Type
+ b) Vertical Type
+ c) Horizontal Mask
+ d) Vertical Mask
+ You can use the type tools for inserting text
+ into the picture.
+    Ctrl + Shift + >     increase font size
+    Ctrl + Shift + <     decrease the font size
+ Mask allows to select any picture as background for text , instead of color.
+
+Text Options:
+ - Font
+ - Font Size
+ - Style [Bold / Italic]
+ - Color
+ - Wrap Text [ Arc, Flag, FishEye]
+
+Blending Options 
+- Insert text into picture
+- Goto Layers panel
+- Right Click on Text Layer
+- Select "Blending Options"
+- Select any blending option like
+	a) DropShadow
+	b) Outer Glow
+	c) Emboss
+	d) Color Overlay
+	e) Gradient Overlay
+	f) Stroke
+	g) Pattern Overlay
+
+Grouping Multiple Layers:
+- First Right Click on first layer and select
+- Press hold down the shift key 
+- Right click on second layer and select
+- Release the shift key
