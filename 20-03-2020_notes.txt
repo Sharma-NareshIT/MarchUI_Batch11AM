@@ -1,0 +1,66 @@
+Photoshop files are saved by extention .psd
+
+- Save as .psd  - so that you can open and edit later.
+- Save as .jpg   - so that you  can upload into page.
+
+Images in HTML 
+<img> is used for adding images into HTML pages.
+
+Image Attributes
+1. Basic Attributes
+
+ Attribute		Description
+ ===========================================
+ alt	 It defines the alternative text to display 
+	 when image fails to load.
+
+ width	  It specifies the width and height of image
+ height	  in pixels or in percent. Size in % will allow
+	  to adjust image according browser width.
+
+ border	  It sets a border for Image by pixels.
+
+ src              It defines the name and path of image
+	   to display. Always use virtual path.
+
+ align           It specifies alignment for image left or 	  right. It have no center alignment. 
+	   If you define  alignment the text will
+	   warp according to alignment.
+
+  hspace       It is used to define horizontal and
+  vspace       vertical space between text and image.
+
+   title            It is used to display a screen tip when
+	    mouse pointer is over the image.
+
+
+Syntax:
+ <img src="imagePath"  alt="sometext" width="100%" height="100%" border="2" align="left" hspace="20" vspace="20" title="screenTip">
+
+
+2. Advanced Attributes for Image
+
+Attribute			Description
+============================================
+crossorigin         It is use to restrict access to image
+	           across servers [CORS] - Cross
+	           Origin Resource Sharing
+	           a) use-credentials
+	           b) anonymous
+
+decoding	           It specifies how to load image
+	           you can use
+		a) sync    - one after another
+		b) async  - all at a time
+		c) auto     - change according to
+			 situation.
+
+Importance          It specifies the priority of image
+	           which can be low, high.
+
+
+
+
+
+
+
