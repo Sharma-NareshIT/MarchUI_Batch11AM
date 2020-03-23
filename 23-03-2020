@@ -1,0 +1,132 @@
+Inter Document Links:
+- A hyper link that navigates the user to any another document or url.
+- Anchor <a> element with "href" attribute is used for navigation.
+- Navigation can be to any file
+	<a href="home.html"> Home </a>
+- Navigation can be to any URL.
+	<a href="http://www.amazon.in">
+	Shopping
+	</a>
+- Navigation can be to any mail application
+                  <a href="mailto:hr@nareshit.in">
+	  email
+	</a>
+- Navigation can be to files like Images, PDF, which can open in browser.
+
+- Navigation can be to any file, but every file can't open in browser such as PPT, Excel, Word, Audio etc..
+
+- If any file defined in link can't open, then the file will be downloaded on click.
+
+Ex: Inter document links
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Favorites</title>
+    </head>
+    <body>
+        <h2>Favorites</h2>
+        <ol>
+            <li><a href="tutorial.html">View Our Tutorial</a></li>
+            <li><a href="http://www.amazon.in">Amazon Shopping</a></li>
+            <li>Contact <a href="mailto:hr@nareshit.in">hr@nareshit.in</a></li>
+            <li><a href="Images/earpods.jpg">Bose Earpods</a></li>
+            <li><a href="Docs/cssdemo.pdf">CSS Tutorial</a></li>
+            <li><a href="Docs/collections.doc">Collections Document</a></li>
+        </ol>
+    </body>
+</html>
+
+
+FAQ's:
+1. How to design a link so that the link target file will always download? i.e it will not open in browser.
+A. HTML 5 have introduced a new attribute for downloading. The attribute is "download".
+
+  Syntax:
+    <a href="Images/earpods.jpg" download>
+     Earpods
+    </a>
+
+2. How to remove underline for HyperLink?
+A. By using Style  = text-decoration:none
+
+     To Remove underline for all links:
+      <style>
+         a {
+             text-decoration:none;
+            }
+      </style>
+ 
+     To Remove underline for any specific:
+
+      <a href=""  style="text-decoration:none">
+
+3. How to change color for Hyperlink?
+A. By using HTML we have body attributes
+	a) alink
+	b) vlink
+    By using Styles we can change colors
+	a:link	- normal [not visited]
+	a:visited	- visited link
+	a:active	- active link
+  Ex:
+      <style>
+            a:link {
+                color:black;
+            }
+            a:visited {
+                color: green;
+            }
+            a:active {
+                color:yellow;
+            }
+        </style>
+
+4. How to open the linked file in a new Tab?
+A. You can open the linked file in a new tab by using the attribute "target=_blank".
+
+Syntax:
+ <a href="tutorial.html" target="_blank">
+  View Our Tutorial
+ </a>
+
+5. How to open the linked file in a new window not tab?
+A. By using JavaScript  "window.open()" method in  href.
+
+   href="javascript:window.open('fileName', 'title', 'width=0  height=0 ')
+
+Ex:
+ <a href="javascript:window.open('Images/earpods.jpg', 'Earpods', 'width=300 height=300')">   Earpods </a>
+
+
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Favorites</title>
+        <style>
+            a:link {
+                color:black;
+            }
+            a:visited {
+                color: green;
+            }
+            a:active {
+                color:yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Favorites</h2>
+        <ol>
+            <li><a style="text-decoration: none;" href="javascript:window.open('tutorial.html','Tutorial','width=500 height=300')">View Our Tutorial</a></li>
+            <li><a href="http://www.amazon.in">Amazon Shopping</a></li>
+            <li>Contact <a href="mailto:hr@nareshit.in">hr@nareshit.in</a></li>
+            <li><a href="javascript:window.open('Images/earpods.jpg','Earpods','width=400 height=300')">Bose Earpods</a></li>
+            <li><a href="Docs/cssdemo.pdf">CSS Tutorial</a></li>
+            <li><a href="Docs/collections.doc">Collections Document</a></li>
+            <li><a href="Register.html">Register</a></li>
+        </ol>
+    </body>
+</html>
