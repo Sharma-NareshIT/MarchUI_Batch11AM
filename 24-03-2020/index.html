@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Amazon | India</title>
+        <style>
+            header {
+                text-align: center;
+                background-color: darkcyan;
+                color: white;
+            }
+            footer {
+                text-align: center;
+                background-color: darkcyan;
+                color:white;
+                margin-top: 30px;
+            }
+            section {
+                height: 400px;
+            }
+            #leftPanel {
+                float: left;
+                width: 250px;
+                background-color: lightcyan;
+                border: 2px solid darkcyan;
+                height: 100%;
+                font-size: 20px;
+                padding-left: 10px;
+            }
+            #rightPanel {
+                float: left;
+                width: 70%;
+                border: 2px solid darkcyan;
+                height: 100%;
+                margin-left: 20px;
+                overflow: scroll;
+            }
+            iframe {
+                width: 70%;
+                border-style: none;
+                height: 100%;
+            }
+            ul {
+                list-style-type: none;
+            }
+            li {
+                margin-top: 15px;
+                border:2px solid black;
+                box-shadow: 0px 2px 3px darkcyan;
+                width: 150px;
+            }
+            a {
+                text-decoration: none;
+            }
+        </style>
+        <link rel="stylesheet" href="../Fonts/css/all.css">
+    </head>
+    <body>
+        <header>
+            <h2>Amazon Shopping Online</h2>
+        </header>
+        <section>
+            <div id="leftPanel">
+               <h2>Amazon Offers</h2>
+               <ul>
+                   <li><span class="fa fa-home"></span><a href="home.html" target="frameBody" >Home</a></li>
+                   <li><span class="fa fa-tv"></span><a href="electronics.html" target="frameBody" >Electronics</a></li>
+                   <li><span class="fa fa-shoe-prints"></span><a href="footwear.html" target="frameBody">Footwear</a></li>
+                   <li><span class="fa fa-tshirt"></span><a href="fashion.html" target="frameBody">Fashion</a></li>
+                   <li><span class="fa fa-address-book"></span><a href="contact.html" target="frameBody">Contact</a></li>
+               </ul>
+            </div>
+            <div id="rightPanel">
+                <iframe name="frameBody" src="home.html"></iframe>
+            </div>
+        </section>
+        <footer>
+            <i>&copy; Copyright Amazon 2020</i>
+        </footer>
+    </body>
+</html>
