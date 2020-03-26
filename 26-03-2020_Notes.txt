@@ -1,0 +1,157 @@
+Styles for Link Target
+- If page is having intra document links, which are displayed in a single page, then you can use the style target to highlight the topics on link Click.
+- Initial the topics are in normal state with some styles. And when they become target they acquire additional effects
+
+Syntax:
+       .containerNormal {
+            some effects;
+        }
+       .containerNormal: target {
+            change of effects;
+        }
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Link Target</title>
+        <style>
+            span {
+                width: 200px;
+                margin-left: 30px;
+            }
+            .container {
+                margin:30px;
+                padding:20px;
+                box-shadow: 0px 3px 4px darkcyan;
+            }
+            .container:target {
+                margin:30px;
+                padding:20px;
+                box-shadow: 0px 3px 4px darkcyan;
+                background-color: black;
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <span><a href="#html">HTML</a></span>
+            <span><a href="#css">CSS</a></span>
+            <span><a href="#js">Java Script</a></span>
+        </header>
+        <section>
+            <div id="html" class="container">
+                <h2>HTML</h2>
+                <p> something about HTML.. </p>
+            </div>
+            <div id="css" class="container">
+                <h2>CSS</h2>
+                <p>something about css..</p>
+            </div>
+            <div id="js" class="container">
+                <h2>JavaScript</h2>
+                <p>something about js.. </p>
+            </div>
+        </section>
+    </body>
+</html>
+
+
+Frames:
+=======
+- Frames are available from HTML 4 version
+- Frame will split the window into horizontal and vertical panes.
+- So that in every pane, you can display and handle a document.
+- You can split the window into frames by using the element "Frameset"  <frameset>
+   Syntax:
+         <frameset  rows=""  cols="">
+
+         </frameset>
+ 
+   rows = for horizontal split
+   cols  = for vertical split
+
+- Frameset contains collection of Frames which are defined by using <frame>
+- Every <frame> will have 
+	a) name
+	b) src
+
+  Syntax:
+     <frameset rows="" cols="">
+          <frame name=""  src=""> </frame>
+          <frame name=""  src=""> </frame>
+     </frameset>
+
+
+Note: When you are designing "Frameset" the HTML page can't have "body section". You can't display any content directly. You have to design contents in a page and display inside <frame>.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>Frame Demo</title></head>
+    
+        <frameset rows="15%, 70%, 15%" noresize>
+            <frame name="top" src=""></frame>
+            <frame name="middle" src="electronics.html"></frame>
+            <frame name="bottom" src=""></frame>
+        </frameset>
+    
+</html>
+
+Ex: Shopping Site
+1. Add a new HTML File by name
+	          "frameindex.html"
+
+<!DOCTYPE html>
+<html>
+    <head><title>Amazon Shopping</title></head>
+    <frameset rows="25%, 75%" noresize>
+        <frame name="top" src="menu.html"></frame>
+        <frame name="bottom" src="home.html"></frame>
+    </frameset>
+</html>
+
+2. Add another document
+	       "menu.html"
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+        li {
+            font-size: 2em;
+            margin-left: 40px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Shopping Categories</h2>
+    <ul>
+        <li><a href="home.html" target="bottom">Home</a></li>
+        <li><a href="electronics.html" target="bottom">Electronics</a></li>
+        <li><a href="footwear.html" target="bottom">Footwear</a></li>
+        <li><a href="fashion.html" target="bottom">Fashion</a></li>
+        <li><a href="contact.html" target="bottom">Contact</a></li>
+    </ul>
+</body>
+
+Frames can be nested:
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>Nested Frame</title></head>
+    <frameset rows="15%, 70%, 15%">
+        <frame name="top" src=""></frame>
+        <frameset cols="15%, 70%, 15%">
+            <frame name="left" src=""></frame>
+            <frame name="center" src=""></frame>
+            <frame name="right" src=""></frame>
+        </frameset>
+        <frame name="middle" src=""></frame>
+        <frame name="bottom" src=""></frame>
+    </frameset>
+</html>
+	         Forms in HTML
