@@ -1,0 +1,108 @@
+	            Forms in HTML
+- Form provides an UI that allows the user to interact with data or with our application.
+- Form is a container with collection of controls like button, textbox, checkbox, radio, listbox etc..
+- In HTML DOM
+	 window
+	 |_document
+	    |_forms[]	--> collection
+	       |_elements[]
+- A form in HTML is created by using <form> element.
+- Elements in the form are created by using
+  <input>
+  <select>
+  <option>
+  <optgroup>
+  <textarea>
+  <datalist>
+  <meter>
+  <progress>
+
+The <form> Element:
+ - It is a container with collection elements like buttons, textbox, checkbox, radio, listbox, dropdown list etc..
+  Syntax:
+	<form>
+	         // elements
+	</form>
+
+Form Attributes:
+
+Attribute		Description
+===========================================
+ id	      It defines a unique reference id for from.
+ name	      It defines a reference name for form.
+ class	      It defines a class name for css or for
+	      reference in logic.
+ method	      It specifies the request type to use in
+	      order to submit the data. GET/POST
+ action	      It specifies where to submit the data 
+	      i.e any server side page.
+ target	      It submits and opens the target in a 	
+	      new tab or specified frame.
+ novalidate    It will disable the form validation.
+
+
+Form Methods:
+- Every form is by default defined on GET method.
+- A form can be defined for GET or POST methods.
+- In services form can use the methods like GET, POST, PUT, DELETE, PURGE, OPTIONS etc..
+- You can submit the form data to server on both GET and POST.
+
+GET			POST
+============================================
+- Data is appended into URL       - Data is submitted
+  as QueryString.		    into form body
+			    [message body]
+- Anyone can view your data.	  - users can't view
+		                      after submit.
+- It is easy to hack your data.	  - It difficult to hack
+- It is not safe.		  - It is safer than GET
+- Your data will be stored in	  - It is not stored in
+  browser logs[history].	    browser logs.
+- Anyone can bookmark data.     - It can't be 			    bookmarked
+- Data is in URL so you can't       - you can submit
+  pass complex data i.e binary	    complex data.
+  [images, graphics].
+- Limit for data , max you can	   - No limit for data.
+  submit 2048 chars in query
+  string.
+- It can handle only ASCII type     - Any type data
+  value.
+- Always use GET method to	   - Post method to
+  fetch data from server not to	     submit.
+  submit to server.
+- The data you submit can be	   - Data can't be 			     cached.
+  cached i.e it is stored in the
+  buffer for sometime. so that
+  you can access and use from
+  buffer. It reduces burden on  
+  server.
+
+ GET 	: for fetching the data
+ POST	: for submittng the data
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+        <style>
+            form {
+                width: 300px;
+                height: 200px;
+                margin:auto;
+                margin-top:50px;
+                border:2px solid darkcyan;
+                border-radius: 5px;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="frmRegister" method="POST" action="welcome.aspx" target="_blank" novalidate >
+            <h2 align="center">Register</h2>
+            Email:
+            <input type="email" name="username">
+            <button>Submit</button>
+        </form>
+    </body>
+</html>
