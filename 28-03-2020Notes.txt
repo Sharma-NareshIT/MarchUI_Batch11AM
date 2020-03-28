@@ -1,0 +1,75 @@
+Input Element <input> :
+  -It allows the user to input any value. 
+  -It can display value and allow the user to input or edit value.
+
+Tag <input> Attributes:
+1. id 	: It defines an unique reference ID.
+2. name	: It defines a reference name, which can be
+	  common for many elements.
+3. class	: It defines a class name for css or for
+	  refernce in code.
+
+Note: A form can't submit value of element if "name" is not defined. Hence name is mandatory to submit value.
+          Always use "camelCase" for naming.
+	ex:  txtAge
+	       txt -  object type
+                         Age - purpose 
+
+4. value : It specifies the value you want to display in the element by default.
+
+5. type :  It specifies the type of value that is allowed from the input element. You can restrict the data type of input value.
+
+   	DataTypes for Input
+	- text
+	- passsword
+	- color
+	- date
+	- datetime
+	- datetime-local
+	- email
+	- month
+	- number	
+	- range
+	- search
+	- tel
+	- time
+	- url
+	- week
+	- file
+
+
+ Syntax:
+ 	<input type="text">
+	<input type="number">
+	<input type="date">
+
+Note: The new input types are not support on every browser, we have to depend on Jquery plug-in, widgets.
+
+6. size  : It defines the width for input element. The
+	default size is 20.
+
+	<input type="text" size="40">
+
+7. minlength : It specifies the minimum number of
+	       chars that can be entered into input.
+	       It is used for text and password type.
+
+8. maxlength: It specifies the maximum number of
+	       characters that can be entered into
+	       input.
+
+ Syntax:
+     <input type="text" minlength="4" maxlength="10">
+
+9. min 	]  Used to define the numeric range for
+10. max	]  input value. It can be used for number 	   and range.
+
+  Syntax:
+  <input type="number" min="15" max="30" value="25"  name="txtAge">
+
+11. required: It is used to define mandatory fields in a form. If you define required attribute then it must have a value. You can't submit empty / null.
+
+ <input type="text"  required>
+
+	
+
