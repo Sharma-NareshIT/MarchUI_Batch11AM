@@ -1,0 +1,97 @@
+12. readonly : It is an attribute which is used to restrict editing of value in input element.
+
+ Syntax:
+   <input type="text"  value="John" readonly>
+
+13. disabled : It is used to disable the element, so that form can't submit the disabled element value.
+
+ <input type="text"  value="John" disabled>
+
+FAQ: What is difference between disabled and readonly?
+A.  Readonly will not allow to change but allows to submit the value.
+      Disabled will not allow to change and will not allow to submit.
+
+14. Placeholder:  It is used to display watermark text inside input element.
+
+Syntax:
+ <input type="password"  name="txtPwd" minlength="4" maxlength="10" placeholder="Password 4 to 10 chars Only">
+
+Note: When user inputs value the placeholder will be removed.
+
+15. Autofocus: It sets focus into any element directly on page load. Focus will be only to the first element if it is defined for multiple elements.
+
+ <input type="text"  name="txtName" autofocus>
+
+16. list : It refers to datalist , which is displayed while user is keying-in [typing] the characters. It give suggestions based on the keyword typed in input.
+              It requires a <datalist> with collection of <option> elements.
+
+Syntax:
+  <input type="text"  list="terms">
+  <datalist id="terms">
+  <option> Term-1 </option>
+  <option> Term-2 </option>
+  </datalist>
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google</title>
+    </head>
+    <body>
+        <div align="center">
+            <font size="5">
+                Google
+            </font>
+            <div style="margin-top: 20px;">
+               <input type="text" size="40" list="terms">
+               <datalist id="terms">
+                 <option>JavaScript Tutorial</option>
+                 <option>JavaScript Examples</option>
+                 <option>HTML Tutorial</option>
+                 <option>HTML Basics</option>
+                 <option>HTML Examples</option>
+                 <option>JavaScript Basics</option>
+               </datalist>
+            </div>
+        </div>
+    </body>
+</html>
+
+17. pattern : It is used to verify the format of input value and restrict the value to a specific format.
+	  Patterns are written by using a regular expression, which is a combination of meta characters and quantifiers { }.
+
+Meta Characters		Description
+===========================================
+?		Zero or One occurance	     
++		One or More occurance
+* 		Zero or More occurance
+\		To define any entity 
+d		Only numeric allowed
+w		Alpha numeric with _
+s		Blank spaces allowed
+
+
+Ex:
+     color,  colour
+     pattern="color, colour"    --> Invalid
+     pattern="color || colour"  --> Invalid
+
+    
+
+     pattern="colou?r"
+
+      u  - can be zero times or one time.
+
+Ex:
+<body>
+    <form>
+        <div>
+            <dl>
+                <dt>Your Text</dt>
+                <dd><input size="40" type="text" placeholder="You can enter only color or colour" name="txtName" pattern="colou?r"> </dd>
+            </dl>
+            <button>Submit</button>
+        </div>
+    </form>
+</body>
