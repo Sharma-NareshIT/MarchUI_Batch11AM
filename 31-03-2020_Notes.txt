@@ -1,0 +1,174 @@
+pattern requires meta characters and quantifiers:
+
+Meta Character	Description
+============================================
+ ?		Zero or One occurance of char.
+ +		One or more occurances of char.
+ *		Zero or more occurances of char.
+ \		for any individual character or
+		entity.
+ w		It is an entity for word, it can be
+		aplha numeric with underscore _
+ 		[lowercase alphabet, uppercase
+		 alphabet, number 0 to 9, and
+		 underscore ]
+  d		It is an entity for only numeric.
+		[0-9]
+  s		It is an entity for blank space.
+  \^		Expression must start with.
+  $		Expression must end with.
+		\^[A-Z][0-9]$  
+  [A-Z]		Only uppercase allowed
+  [a-z]		Only lowercase allowed
+  [a-zA-Z] or [a-Z]	Both upper and lowercase
+  [0-9]		Only number allowed
+  [a-zA-Z0-9]	Aplha numeric allowed
+  [a,d,s]		Only specified chars allowed
+  		[you can input any text but it
+		 should contain only a, d & s]
+  [^a,d,s]		Excluding the 3 all others 				allowed.
+  [a-mA-M4-9]	Allows only the chars within
+		specified range.
+  [!@#$%&]	Only specified special chars 
+		allowed
+  \@  \.  \$ \+	Individual special chars allowed
+
+  (?=.*[A-Z])	At least one uppercase letter
+
+  (?=.*[a-z])	At least one lowercase letter
+  
+  (?=.*[0-9])	At least one numeric
+ 
+  (?=.*[!@#$%&])	At least one special char
+
+   ( )		Defining sub expression
+ 
+    .		Matches any single character
+		[a.c]  abc - valid
+		[a,c]  a or c 
+
+[A-Z]   --> how many allow - only 1 allowed A, or B, .. Z
+
+Quantifier		Description
+============================================
+ {n}		Exactly n-number of characters
+ {n, m}		Minimum-n and Maximum-m
+ {n, }		Minimum-n and Maximum-any
+
+ n & m refers to numbers.
+
+ {4}		Exactly 4 chars
+ {4, 10}		Minimum 4 and maximum 10
+ {4, }		Minimum 4 and Maximum any
+
+Ex:
+<head>
+    <style>
+        input {
+            width:300px;
+            border-radius: 5px;
+            border-style: solid;
+            border-width: 1px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd>
+                <input type="text" name="txtName" placeholder="4 to 10 Chars Block Letters" pattern="[A-Z]{4,10}">
+            </dd>
+            <dt>Password</dt>
+            <dd>
+                <input type="password" name="txtPwd" placeholder="4 to 15 alpha numeric with at least 1 uppercase letter" pattern="(?=.*[A-Z])\w{4,10}">
+            </dd>
+            <dt>Mobile</dt>
+            <dd>
+                <input type="text" name="txtMobile" placeholder="+91 10 digits number" pattern="\+91[0-9]{10}">
+            </dd>
+        </dl>
+        <button>Submit</button>
+    </form>
+</body>
+
+step: It is used to define the step value for numeric range
+
+Ex:
+<body>
+    <form>
+        Price Range:
+        <input type="number" min="0" max="10000" step="1500" value="1">
+    </form>
+</body>
+
+Step using DataList:
+<body>
+    <form>
+        Price Range:
+        <input type="number" min="0" max="50" list="values"  value="0">
+        <datalist id="values">
+            <option>10</option>
+            <option>30</option>
+            <option>40</option>
+        </datalist>
+    </form>
+</body>
+
+New Attributes introduced into HTML 5
+================================
+- autocomplete
+- autofocus
+- form
+- formaction
+- formenctype
+- formmethod
+- formnovalidate
+- formtarget
+- height and width
+- list
+- min and max
+- multiple
+- pattern (regExp)
+- placeholder
+- required
+- step
+
+Styles for Input Elements:
+1. Disabled and ReadOnly
+    input:read-only {
+
+    }
+    input:disabled {
+
+    }
+
+Ex:
+<head>
+    <style>
+        input:read-only {
+            background-color: lightgoldenrodyellow;
+            border-style: none;
+        }
+        input:disabled {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>Name</dt>
+            <dd><input  type="text" value="John"></dd>
+            <dt>Email</dt>
+            <dd>
+                <input type="email" value="john@gmail.com" readonly>
+            </dd>
+        </dl>
+    </form>
+</body>
+
+
+
+
