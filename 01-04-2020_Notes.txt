@@ -1,0 +1,156 @@
+Form Element
+Input Element
+Input element attributes
+
+         Various Types of Form Controls in HTML
+         ----------------------------------------------------------
+1. Fieldset and Legend
+     Fieldset is used for defining a group of elements.
+     Legend is used for defining a caption for group.
+
+Syntax:
+  <fieldset>
+      <legend> Title </legend>
+      .... your controls ....
+  </fieldset>
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>Fieldset demo</title></head>
+    <body>
+        <fieldset>
+            <legend>User Login</legend>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text"></dd>
+                <dt>Password</dt>
+                <dd><input type="password"></dd>
+            </dl>
+            <button>Login</button>
+        </fieldset>
+    </body>
+</html>
+
+
+2. Radio Buttons  [input type="radio"]
+   - Radio button are used for providing choice
+   - User can choose one or multiple.
+
+Syntax:
+  <input type="radio"> Text
+
+   - Radio Button once checked can't be unchecked.
+   - In order to uncheck the radios you have to implement "Mutex" mechanism or restart the process.
+   - Mutex is "Mutual Exclusion".
+   - Mutex is a multi threading mechanism that allow only one task in the process, that belongs to thread.
+   - On single thread multiple tasks are defined and only task can be used.
+   - This allows user to select only one option from a group of choices. [only when mutex is working]
+   - If selection is mandatory but user can choose only one option from a group of choices then you can use "Radio" button.
+   - You can make selection mandatory by using "checked" attribute.
+   - You can define Mutex mechanism by specifying a common name for all radios in a group.
+
+ Syntax:
+  <input type="radio" name="pay" checked> Text
+  <input type="radio" name="pay"> Text
+
+  - Radios by default submit "ON" as value.
+  - You can submit any value by defining "value" attribute.
+
+ Syntax:
+   <input type="radio" name="pay" value="UPI" checked> Text
+
+Attribute:
+1. id
+2. name
+3. class
+4. value
+5. checked
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>Radio Button</title></head>
+    <body>
+       <form>
+        <fieldset>
+            <legend>Payment Mode</legend>
+            <input type="radio" name="payment" value="Credit Card" checked> Credit Card
+            <input type="radio" name="payment" value="Debit Card"> Debit Card
+            <input type="radio" name="payment" value="UPI"> UPI
+            <br>
+            <button>Submit</button>
+        </fieldset>
+       </form>
+    </body>
+</html>
+
+3. CheckBox Element
+    - It is similar to radio button , but allows to check and uncheck the option.
+    - You can use checkbox for selecting one or multiple options from a group of choices.
+
+Attribute:
+1. id
+2. name
+3. class
+4. value
+5. checked
+
+Syntax:
+ <input type="checkbox" name="" value="" checked> Text
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CheckBox</title>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Select Courses</legend>
+                <input type="checkbox" name="course" value="Java" checked> JAVA
+                <input type="checkbox" name="course" value="Angular"> Angular
+                <input type="checkbox" name="course" value=".NET" checked> .NET
+                <br>
+                <button>Submit</button>
+            </fieldset>
+        </form>
+    </body>
+</html>
+
+Style for Checked Property:
+   The style ":checked " is used to define effects when checkbox is checked.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>CheckBox Style</title>
+    <style>
+        #terms~span{
+            color:red;
+        }
+        #terms:checked~span {
+            color:green;
+        }
+    </style>
+    </head>
+    <body>
+       <fieldset>
+           <legend>Terms of Service</legend>
+           <div style="width: 600px; height: 200px; background-color: lightgray; overflow: scroll;">
+            <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+            </p>
+            </div>
+            <div>
+                <input id="terms" type="checkbox"> <span>I Accept</span>
+            </div>
+       </fieldset>
+    </body>
+</html>
+
+
+
+   
+
+
