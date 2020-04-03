@@ -1,0 +1,195 @@
+- Form
+- Input
+- Radios
+- CheckBox
+
+	       DropDownList
+- It provides a list of options and allows the user to select any one option from list.
+- In a single line it can display multiple options.
+- DropDownList is designed by using 
+	<select> 
+   It comprises of attributes like: id , name, class, size, multiple.
+
+- The items in dropdown list are designed by using
+	<option>
+   Every option can be defined with following attributes:
+           Attribute	Description
+           -------------------------------------
+           Text	The text to display in UI
+            Value	The value to submit
+            Disabled	To disable the option so that
+		 it can't be selected.
+            Selected	To select the option be default
+		on page load.
+
+ Syntax:
+    <select>
+    <option value="" disabled  selected> Text </option>
+    </select>
+
+
+- The items in dropdown list can be grouped by using 		<optgroup>
+   The title for group is defined by using the attribute "Label"
+
+Syntax:
+<select name="lst">
+<optgroup label="Title"> 
+ <option value="" disabled> Text </option>
+ <option value="" selected> Text </option>
+</select>
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>DropDownlist</title>
+    <style>
+        select{
+            width: 200px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        button{
+            font-size: 20px;
+            border-radius: 5px;
+        }
+    </style>
+    </head>
+    <body>
+        <form>
+        <fieldset>
+            <legend>Select Product</legend>
+            <select name="lstProducts">
+                <option>Choose from List</option>
+                <optgroup label="Electronics">
+                    <option value="TV0450">TV</option>
+                    <option value="Mob420" disabled>Mobile</option>
+                </optgroup>
+                <optgroup label="Footwear">
+                    <option selected value="Nike Casuals">Nike Casuals</option>
+                    <option value="Boot">Lee Cooper Boot</option>
+                </optgroup>
+            </select>
+            <button>Submit</button>
+        </fieldset>
+    </form>
+    </body>
+</html>
+
+	                  ListBox
+- It is similar to DropDownList
+- It can display multiple items on screen with a scrollbar.
+- It allows the user to select or multiple options.
+- A listbox is also designed by using
+	<select>
+  but it requires an attriubte  : size or multiple
+
+   Size	: It converts into listbox but user select
+	  only one option.
+   Multiple : It converts into listbox where user can
+	  select one or multiple options.
+
+Ex:
+<head>
+    <style>
+        select {
+            border-radius: 5px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Select City</legend>
+        <select multiple size="3">
+            <option>Delhi</option>
+            <option>Chennai</option>
+            <option>Hyd</option>
+            <option>Mumbai</option>
+        </select>
+    </fieldset>
+</body>
+
+	               Progress
+- It is used to show the status of any task performed inside the page, like installing, downloading, copying, uploading etc..
+- You control progress by using attributes
+	a) Id
+	b) Name
+	c) Class
+	d) Min
+	e) Max
+	f) Value
+
+Ex:
+<head>
+    <style>
+
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Uploading Photo</legend>
+        <dl>
+            <dt>Preparing for Upload</dt>
+            <dd>
+                <progress></progress>
+            </dd>
+            <dt>40% Uploaded</dt>
+            <dd>
+                <progress min="1" max="100" value=40></progress>
+            </dd>
+            <dt>Upload Completed</dt>
+            <dd>
+                <progress min="1" max="100" value="100"></progress>
+            </dd>
+        </dl>
+    </fieldset>
+</body>
+
+		  Meter
+- It is used to display the grade meter.
+- Attributes similar to progress
+	a) id
+	b) class
+	c) name
+	d) min
+	e) max
+	f) value
+	g) low
+	i)  high
+
+- Less gap between low and high  : red
+- More gap between low and high : yellow
+- Low and high are zero	     : green
+
+
+Ex:
+<head>
+    <style>
+        meter {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Ratings for Website</legend>
+        <dl>
+            <dt>30 out of 100</dt>
+            <dd>
+                <meter min="1" max="100" value="30"></meter>
+            </dd>
+            <dt>100 out of 100</dt>
+            <dd>
+                <meter min="1" max="100" value="100"></meter>
+            </dd>
+            <dt>Poor</dt>
+            <dd>
+                <meter min="1" max="100" low="60" high="80" value="100"></meter>
+            </dd>
+            <dt>Average</dt>
+            <dd>
+                <meter min="1" max="100" value="100" low="40" high="80"></meter>
+            </dd>
+        </dl>
+    </fieldset>
+</body>
