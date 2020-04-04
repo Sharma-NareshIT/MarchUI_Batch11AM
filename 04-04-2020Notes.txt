@@ -1,0 +1,81 @@
+	           Buttons in HTML
+- Buttons are used to confirm user actions.
+- Buttons are uses in
+	record actions [insert, create, update etc..]
+	record navigation[previous, next, first ..]
+	miscelaneous [submit, reset, ok, cancel, 
+		         print etc.. ]
+- In HTML buttons are classified into 2 types
+	a) Generic Buttons
+	b) Non-Generic Buttons
+
+- Generic Buttons are the buttons with predefined functionality.
+	<input type="submit">
+	<input type="reset">
+ 
+ Submit  : Is a button that can submit the form.
+ Reset    : Is a button that will reset the form.
+
+- Non-Generic Buttons are the buttons without and pre-defined functionality. They are ordinary buttons. You have to define functionality manually.
+
+	<input type="button">
+
+Attribute:
+1. id
+2. name
+3. class
+4. value
+
+HTML 5 <button> Element, which can be used for both generic and non-generic. The "type" attribute can configure  the button as:
+	type=submit	] Generic	
+	type=reset	]
+	type=button	]  Non-Generic
+
+New Attributes for Button element
+1. formmethod   : It specifies the request type i.e
+	             GET or POST to use on submit click
+2. formaction     : It specifies the target page where
+	            the data to be submitted i.e any
+	            server side page.
+3. formtarget      : It specifies where to open the
+	            target i.e in a new window or in
+	            the same window.
+	            new tab: _blank.
+
+4. formnovalidate  : It specifies validation on submit
+	            to enable or disable.
+
+
+<input type="submit"  formaction=""  formmethod="" formnovalidate=""  formtarget="">
+
+<button type="submit" formaction=""  formmethod="" formnovalidate=""  formtarget=""> </button>
+
+Ex:
+<head>
+    <style>
+        dd{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>Name</dt>
+            <dd><input type="text" name="txtName" required></dd>
+            <dd>
+                <button formmethod="GET" >Submit with GET</button>
+                <button formmethod="POST" formaction="welcome.aspx" formtarget="_blank" >Submit with POST</button>
+                <button formmethod="GET" formnovalidate="formnovalidate" >Submit without Validation</button>
+            </dd>
+        </dl>
+    </form>
+</body>
+
+Label Element: It is just a container used to display labels and captions for form elements in HTML. YOu can bind the label with form element.
+	You can bind any HTML element to Label by using "for" attribute.
+
+      <label for="elementName"> Text </label>
+      <label for="txtName">Name</label>
+
+HTML 5 New Elements
