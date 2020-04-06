@@ -1,0 +1,112 @@
+The <output>  Element: 
+===================
+It is new HTML element used to display the result of any expression. It evaluates and reutrns result based on form input.
+	It requires an form event "oninput" , which is used to perform functionality on input.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>Output Demo</title>
+    <style>
+        dt {
+            font-weight: bold;
+        }
+        output {
+            width: 200px;
+            height: 50px;
+            border:1px solid black;
+        }
+    </style>
+    </head>
+    <body>
+        <form oninput="amount.value=parseFloat(txtQty.value)*parseFloat(txtPrice.value)">
+            <dl>
+                <dt>Name</dt>
+                <dd><input type="text"></dd>
+                <dt>Price</dt>
+                <dd><input type="text" id="txtPrice" value="0"></dd>
+                <dt>Quantity</dt>
+                <dd><input type="number" id="txtQty" min="1" max="5" value="1"></dd>
+                <dt>Total Amount</dt>
+                <dd>
+                    <output name="amount"></output>
+                </dd>
+            </dl> 
+        </form>
+    </body>
+</html>
+
+Ex:
+<body>
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        A : <input type="text" id="a" value="0">
+        +
+        B : <input type="text" id="b" value="0">
+        =
+        <output name="result"></output>
+    </form>
+</body>
+
+	           HTML Tables
+- A table can organize information into rows and columns.
+- Tables are required for presenting data and provide an UI to interact with data like : filtering, sorting etc..
+- To create and configure tables in HTML we can use the following elements.
+
+Element			Description
+============================================
+<table>		It is a collection of rows and cols
+<caption>		It is to define a caption for table
+<colgroup>	Groups the columns to define
+		effects.
+<thead>		It specifies the header
+<tbody>		It specifies the body
+<tfoot>		It specifies the footer
+<th>		It specifies table header cell
+<tr>		It specifies table row
+<td>		It specifies the table data [cell]
+
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>Table in HTML</title>
+     <style>
+        
+     </style>
+    </head>
+    <body>
+        <table width="400" border="1">
+            <caption>Products List</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Photo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>Earpods</td>
+                  <td>45000.53</td>
+                  <td>
+                      <img src="../Images/earpods.jpg" width="50" height="50">
+                  </td>
+                </tr>
+                <tr>
+                    <td>T-Shirt</td>
+                    <td>2300.44</td>
+                    <td>
+                        <img src="../Images/tshirt.jpg" width="50" height="50">
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>&copy; copyright 2020</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
