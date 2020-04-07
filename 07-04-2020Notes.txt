@@ -1,0 +1,139 @@
+	         Tables in HTML
+<table>
+<caption>
+<thead>
+<tbody>
+<tfoot>
+<tr>
+<td>
+<th>
+<colgroup>
+
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>Tables</title></head>
+    <body>
+        <table>
+            <caption>Products Table</caption>
+            <colgroup span="1"></colgroup>
+            <thead>
+                <tr>
+                    <th>Product Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Samsung TV</td>
+                    <td>54000.66</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Nike Casuals</td>
+                    <td>4000.55</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Earpods</td>
+                    <td>6700.66</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&copy; copyright 2020</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
+
+Table Attributes:
+1. Border, Frame, Rules
+
+    Attribute	Description
+   =======================================
+   Frame		It sets a frame for table, which
+		can use values box, void, rhs, 				lhs, above and below.
+
+  Rules		Defined for rows and cols.
+		all, none, groups, rows, cols
+
+  Border		Defined for cell. It can contain
+		only 0 or 1.
+		0 [false] - no border
+		1 [true]  - border.
+
+   Frame is set for Table
+   Rules set for Rows and Columns
+   Border set for Cells 
+   [All are defined in <table> element]
+
+   Note: Rules and Border both can't be used. If you apply both to table only rules will be displayed. You should remove rules attribute to use border.
+
+Syntax:
+     <table border="1" frame="void">
+     <table border="1" frame="box">
+     <table border="0" frame="box">
+     <table rules="groups" frame="box">
+     <table rules="all" frame="void">
+     
+
+
+2. Cellspacing and Cellpadding
+
+    Attribute	Description
+   ===================================
+    cellspacing	It is distance between cells
+    cellpadding	It is distance between cell border
+		and content inside.
+
+Syntax:
+  <table cellspacing="10" cellpadding="5">
+
+3. Align and Valign
+
+    Attribute	Description
+===========================================
+    align		It aligns the content horizontally
+		left, center or right.
+		you can define for table, group,
+		tr, th, td.
+
+    valign		It aligns the content vertically
+		top, center, bottom.
+		you can define for group, tr,
+		th, td.
+
+Syntax:
+ <table align="center">
+ <thead align="center" valign="top">
+ <tr align="right" valign="bottom">
+
+4. bgcolor and background
+
+   Attribute	Background
+  =======================================
+   bgcolor		Sets a background color for
+		table, group, tr, th, td.
+
+   background	Sets a background picture
+		for table, group, tr, th, td.
+
+Syntax:
+   <table background="../Images/back.png">
+   <table bgcolor="yellow">
+   <thead bgcolor="yellow">
+
+Note : If you set background image, then background color will not be displayed.
+
+
+
+
+
+
