@@ -1,0 +1,130 @@
+5. Merging Row and Columns in Table
+
+Attributes		Description
+=====================================
+ rowspan		It merges specified number of
+		rows into single row. It can be	
+		defined for <td> element.
+
+ colspan		It merges specified number of
+		columns into single cell [column]
+		It is defined for <td> or <th>
+
+
+Note: Rowspan will work only within the group.
+          Colspan can be applied to all columns.
+
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>Tables</title></head>
+    <body>
+        <table width="500" border="1" align="center">
+            <thead>
+                <tr>
+                    <th rowspan="4">Head Section</th>
+                </tr>
+                <tr bgcolor="yellow">
+                    <th colspan="5">Students Details</th>
+                </tr>
+                <tr>
+                    <th colspan="2">Name</th>
+                    <th colspan="3">Address</th>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>City</td>
+                    <td>State</td>
+                    <td>Postal Code</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="4">Body Section</th>
+                </tr>
+                <tr>
+                    <td>Raj</td>
+                    <td>Kumar</td>
+                    <td>Chennai</td>
+                    <td>TN</td>
+                    <td>600063</td>
+                </tr>
+                <tr>
+                    <td>Kiran</td>
+                    <td>Kumar</td>
+                    <td>Chennai</td>
+                    <td>TN</td>
+                    <td>600063</td>
+                </tr>
+                <tr>
+                    <td>Sanjay</td>
+                    <td>Kumar</td>
+                    <td>Chennai</td>
+                    <td>TN</td>
+                    <td>600063</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th rowspan="2">Footer</th>
+                </tr>
+                <tr>
+                    <td colspan="5" align="center" bgcolor="yellow">&copy; copyright 2020 </td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
+
+6. Height and Width
+     Height is used to define height of row in specified pixels. you can define for row or table.
+     Width is used to define width for column , you can define for <td> or <th> 
+
+Ex: Site Layout using Table
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout with Table</title>
+        <link rel="stylesheet" href="../Fonts/css/all.css">
+        <style>
+            td {
+                box-shadow: 2px 3px 4px darkcyan;
+            }
+            ul {
+                list-style-type: none;
+            }
+            li {
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <table cellspacing="20" cellpadding="20" width="100%" align="center" frame="void" border="1">
+        <tr>
+            <td colspan="3" style="font-size:2em; text-align: center;">Amazon Shopping <span class="fa fa-shopping-bag"></span> Online Store</td>
+        </tr>
+        <tr height="500">
+            <td width="20%" valign="top" style="font-size: 2em;">
+                <h5>Shopping Category</h5>
+                <ul>
+                    <li><span class="fa fa-home"></span><a>Home</a></li>
+                    <li><span class="fa fa-tv"></span><a href="../ShoppingSite/electronics.html" target="frameBody">Electronics</a></li>
+                    <li><span class="fa fa-shoe-prints"></span><a href="../ShoppingSite/footwear.html" target="frameBody">Footwear</a></li>
+                    <li><span class="fa fa-tshirt"></span><a href="../ShoppingSite/fashion.html" target="frameBody">Fashion</a></li>
+                </ul>
+            </td>
+            <td width="70%">
+                <iframe name="frameBody" width="100%" height="500" style="border-style: none;"></iframe>
+            </td>
+            <td width="10%">
+                Ads here..
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: center;"><i>&copy; Copyright 2020</i></td>
+        </tr>
+    </table>
+</html>
+     
