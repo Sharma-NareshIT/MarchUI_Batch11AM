@@ -1,0 +1,177 @@
+Marquee
+- It is used for scrolling and sliding content in a page.
+- The <marquee> Tag is used for scrolling content.
+
+Attribute		Description
+===========================================
+Direction	        It specifies the scrolling direction
+	        left, right, up and down.
+	
+	        <marquee direction="left">
+
+Scrollamout   It controls the marquee scrolling speed.
+	       from 1 to 100.
+
+	        <marquee scrollamount="30">
+
+bgcolor	       It sets background color for marquee
+	       area
+
+	        <marquee bgcolor="yellow">
+
+loop	        It specifies how many times marquee
+	        have to scroll after page load.
+	
+	         <marquee loop="3">
+
+behavior="alternate"    It changes from scrolling to
+		    sliding in alternate direction.
+
+
+You stop or start marquee dynamically using JavaScript:
+- start()
+- stop()
+ <marquee onmouseover="this.stop()"  onmouseout="this.start()">
+
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>Nested Tables</title>
+        <style>
+            th {
+                font-size:2em;
+            }
+            .product {
+                float: left;
+                margin-left: 20px;
+            }
+            form {
+                border:1px solid darkcyan;
+                border-radius: 4px;
+                padding:10px;
+            }
+            input, select {
+                font-size: 1em;
+                width:100px;
+                border-radius: 4px;
+            }
+            label {
+                margin-top: 10px;
+            }
+            dt {
+                font-weight: bold;
+            }
+            img {
+                width: 100px;
+                height: 100px;
+                transition: 2s;
+            }
+            img:hover {
+                transform: scale(2);
+                transition: 2s;
+            }
+        </style>
+    </head>
+    <body>
+        <table cellspacing="20" width="100%" border="1" frame="void">
+            <tr>
+                <th>
+                    <marquee behavior="alternate" scrollamount="20">Products Catalog</marquee>
+                </th>
+            </tr>
+            <tr height="400">
+                <td align="center">
+                    <table>
+                        <tr>
+                            <td>
+                                <form>
+                                    <label>Select Category</label>
+                                    <div>
+                                        <select>
+                                            <option>Electronics</option>
+                                            <option>Footwear</option>
+                                            <option>Fashion</option>
+                                        </select>
+                                    </div>
+                                    <label>Search Product</label>
+                                    <div>
+                                        <input type="text">
+                                    </div>
+                                    <label>Select Price</label>
+                                    <div>
+                                        <input type="range">
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                               <marquee onmouseover="this.stop()" onmouseout="this.start()" direction="left" scrollamount="15">
+                                <table class="product" border="1" frame="void" cellspacing="10" cellpadding="10">
+                                    <tr>
+                                        <td>Ear Pods</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="../Images/earpods.jpg" width="100" height="100"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&#8377; 5000.50/-</td>
+                                    </tr>
+                                </table>
+                                <table class="product" border="1" frame="void" cellspacing="10" cellpadding="10">
+                                    <tr>
+                                        <td>JBL Speakers</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="../Images/jblspeaker.jpg" width="100" height="100"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&#8377; 15000.50/-</td>
+                                    </tr>
+                                </table>
+                                <table class="product" border="1" frame="void" cellspacing="10" cellpadding="10">
+                                    <tr>
+                                        <td>T-Shirt</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="../Images/tshirt.jpg" width="100" height="100"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&#8377; 3000.50/-</td>
+                                    </tr>
+                                </table>
+                                <table class="product" border="1" frame="void" cellspacing="10" cellpadding="10">
+                                    <tr>
+                                        <td>Jeans</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="../Images/jeans.jpg" width="100" height="100"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&#8377; 2000.50/-</td>
+                                    </tr>
+                                </table>
+                               </marquee>
+                            </td>
+                            <td width="150">
+                                <form>
+                                    <label>Cart Summary</label>
+                                    <marquee direction="up" loop="3">
+                                    <dl>
+                                        <dt>Products Count</dt>
+                                        <dd>2</dd>
+                                        <dt>Bill Amount</dt>
+                                        <dd>4500.45</dd>
+                                    </dl>
+                                    </marquee>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"><i>&copy; copyright Amazon 2020</i></td>
+            </tr>
+        </table>
+    </body>
+</html>
