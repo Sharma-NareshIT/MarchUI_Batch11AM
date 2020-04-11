@@ -1,0 +1,76 @@
+	                     Flash 
+- Flash is an 2D and 3D animation software.
+- You can create animations for web.
+- Flash animation contains audio, video effects and 2D and 3D motion animations.
+- Flash is used in designing 2D and 3D Games
+
+Download and Install
+------------------------------
+1. Google
+2. Search online for "Macromedia Flash 8 Download"
+
+      https://macromedia-flash-8.soft32.com/
+
+3. Install with Key
+
+         WPD800-59935-59132-35408
+
+
+Creating a New Project
+---------------------------------
+1. Open Macromedia Flash
+2. Select "Create New Flash Document"
+
+Flash Screen Components
+-------------------------------------
+1. ToolBox
+2. Stage
+4. Workspace
+5. Timeline
+6. Frames
+7. Layers
+8. Panels
+9. Properties
+
+
+Flash ToolBox Tools:
+=================
+1. Selection Tool  : It is used to select any object on stage so that you can move the object, cut, copy or delete object.
+
+2. Sub Selection Tool: It is used to select nodes, so that you can re-shape the object.
+     - Click on "border" of any shape
+     - Drag and rotate the nodes
+
+3. Free Transform: It is used to resize, rotate and stretch or skew [tilt] the object.
+
+4. Line Tool : It is used for drawing a line with specified size and color. To change color, size and style goto properties.
+
+5. Lasso : It is used to select a free form portion of object to delete, cut or copy.
+
+6. Pen Tool : It used for drawing object , which comprise of line joining the end points.
+
+7. Text Tool : It is used to insert text into picture, the size, font , style you can control from properties.
+
+8. Oval		]  Draws oval and rectangle
+9. Rectangle 	] 
+
+9. Pencil	 : To draw thin line
+10. Brush : To draw thick lines
+11. Fill Color : To fill any area with a color.
+12. Eraser : It erase a portion of picture.
+13. EyeDropper : To pick a color from picture.
+
+	        Flash Animations
+	        ==============
+Flash animations are categorized into 2 type
+1. Frame by Frame Animation
+2. Tweening Animation
+	a) Motion
+	b) Shape Tween
+
+
+Frame By Frame Animation:
+=======================
+
+Press "F6" for a Key Frame - Duplicate 
+Press Ctrl + Enter
