@@ -1,0 +1,76 @@
+	           Flash Animations
+1. Frames
+    - Animation is designed with frames.
+    - Every frame specifies the position or shape of object.
+    - Frames are several types
+	a) Empty Frame   
+	     without any object.
+	b) Key Frame
+	     with object having animation. 
+                       insert by using "F6" function key
+	c) Static Frame
+	      with object but no animation.
+	      insert by using "F5" function key
+   - The default animation is 12 frames/sec
+   - Best movie animation frame rate is 25 frames/sec
+   - To change frames/sec
+	[right click on stage - select Properties]
+
+2. Layers
+   - Every object must be in a separate layer
+   - You can add or remove layers from time line.
+   - Object can be sent back or forward by changing the layer position
+
+Animation Types:
+1. Frame - by - Frame Animation
+2. Tweening Animations
+
+Frame-by-Frame Animation:
+=======================
+- We have to design every frame individually.
+- Object can change its position or shape in every frame.
+- 25 frames with give 1 sec animation.
+- If you have to continue object without animation then use "F5" static frame
+- If you have to continue object with animation then use "F6" key frame.
+
+Ex:
+1. Create a new Project
+2. Add 2 Layers and rename as
+	+ Polygon
+	+ Oval
+3. Draw Polygon in polygon layer at Frame-1
+4. Draw Oval in oval layer at Frame-1
+5. Select Frame 60 for Polygon layer and Press F5
+    [We want polygon to continue but without animation]
+6. Goto oval layer Frame-2 and press "F6" function key.
+7. In frame-2 change the position or shape of oval.
+8. Repeat keyframes for oval until animation is completed upto 60 frames.
+9.  Press "Enter" key to run once.
+10. PRess "Ctrl +  Enter" keys to run continous.
+
+Tweening Animation:
+==================
+ In tweening animation we have to design the nodes i.e end points. Flash will design all the frames between starting and end point automantically.
+ 
+ You can add any number of end points in tween animation. The tweening animation is again classified into 2 types
+
+	a) Motion Tween
+	b) Shape Tween
+
+Motion Tween: It allows to change the size, orientation and location of object. You can't change the object shape into another object.
+
+Ex:
+1. Create a new Project
+2. Add layers
+	a) Box 
+	b) Text
+3. Draw a box in box layer
+4. Insert text in text layer
+5. Select frame 10 for box and F5
+6. Select frame 10 for text and press F6
+7. In text layer select all frames from 1 to 10.
+8. Right Click on selected frames and select
+	"Create Motion Tween"
+9. Select at 20, 30, 40 frames and change animation for text.
+10. Box layer use F5 upto 40
+11. Ctrl +Enter
