@@ -1,0 +1,44 @@
+		Motion Tween
+Motion Guide:
+- Objects will move in a straight line
+- You Add a Guide layer for Motion Tween to track an object and move it along the given path.
+- Instead of straright line it moves in specified path.
+- The Motion guide should contain a start and end point.
+
+Ex:
+1. Create a new document
+2. Rename Layer1 as "Text"
+3. Add Text in Layer-1
+4. Create Motion Tween for text from 1 to 60 frames.
+5. Right Click on Text Layer and select
+	        "Add Motion Guide"
+6. A Guide Layer is added
+7. Draw a path by using brush, pencil , oval, rectance.
+8. The path should contain start and end points.
+9. Goto Text Layer and Keep the text starting position at Guide Layer start postion [ Frame-1 ]
+10. At frame 60 of Text keep in at the ending position of guide layer.
+11. Select all frames of Text Layer
+12. Goto Properties
+13. Select the option "Orient to Path"
+14. You can also select 
+	"Rotation : Auto, CW, CCW"
+
+
+Masking Effect:
+- It allows a layer to mask existing layer so that the contents in the background are revealed according to specified animation.
+
+EX:
+1. File → Import → Import to Library
+2. Select a Photo and Import into Library
+3. Drag and drop on to stage
+4. Goto Properties and set size for image
+	width	: 540
+	height	: 400
+	x	: 0
+	y	: 0
+5. Upto 60 Frames keep static frame "F5" for picture.
+6. Add another layer with Oval and create motion tween over image. 
+7. Right click on Oval layer and select "Mask"
+
+
+
