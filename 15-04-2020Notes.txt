@@ -1,0 +1,66 @@
+Importing Pictures:
+- Goto File Menu 
+- Select Import 
+- Choose "Import to Library"
+- Select pictures from your computer and add
+
+Flash Symbols:
+- A symbol contains pre-defined animation or effects which you can import and implement in any document.
+
+- You can  create 3 types of symbols in Flash
+	a) Movie Symbol
+	b) Graphic Symbol
+	c) Button Symbol
+
+Graphic Symbol : It is used for images without any animation. By converting into symbol you can change the brightness and image effects.
+
+1. Create a new Document
+2. Insert a Picture into Library
+3. Drag on to stage
+4. Select the picture - Goto Properties
+	    width :550
+	    height: 400
+5. Right Click on picture and select the option
+	 "Convert To Symbol"
+
+      Name	:   Shoe
+      Type	:   Graphic Symbol
+
+      Click OK
+
+6. Goto Properties so that you can now adjust the color and effects for picture.
+
+
+Ex:
+1. In Layer-1  
+	- Add shoe picture 
+    	- Goto properties
+	- Set Color : Brightness to -80
+2. In Layer-2
+	- Add shoe picture
+	- Goto Properties
+	- Select color: Brightness to 0
+3. Set static frame for Layer 1 and 2 at  - 70  Frame
+4. Add Layer-3 with Oval 
+5. Create motion tween for oval on layer1 and layer2
+6. Right Click on Oval layer and select
+	 "Mask"
+
+Movie Symbol : Contains animation i.e a symbol with animation.
+
+1. Goto Insert Menu → New Symbol
+2. Select "Movie Symbol"
+3. Name as "Walk"
+4. Create animation for symbol : frame by frame, or by using tweening.
+5. Back to Scene and Drag the symbol on to stage.
+
+
+
+
+
+
+
+
+
+
+
