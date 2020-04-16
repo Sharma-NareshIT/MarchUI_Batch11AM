@@ -1,0 +1,38 @@
+Button Symbol
+- It is used for creating flash buttons
+- Button are used to control animation actions
+- Button is design in 4 states
+	a) up	 - normal
+	b) down	 - when mouse button is down
+	c) over	 - when button is released
+	d) hit	 - clicked
+
+Ex:
+1. Goto Insert Menu → New Symbol
+2. Specify
+	Name	: Play
+	Type	: Button Symbol
+
+3. At "up" draw an button
+4. Press F6 to goto "Down" and design button on down, over and hit.
+5. Back to stage and drag the button into your animations.
+
+
+		Scene in Flash
+- A movie comprises of several scenes
+- Usually a scene contains general animation with objects
+- Scenes continue one after another.
+- To insert a scene
+	"Insert Menu → Scene"
+- Goto "Edit Scenes" to make changes in the scene.
+
+	       Shape Tweening
+- Changing the shape of any object.
+- Transform one object into another.
+
+Ex:
+1. Draw an object at Frame-1
+2. Goto 50 frame → Right Click → Insert Blank KeyFrame
+3. Draw a new shape at 50
+4. Select all Frames from 1 to 50
+5. Goto properties and select "Tween : Shape"
