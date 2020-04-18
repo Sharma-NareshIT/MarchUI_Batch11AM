@@ -1,0 +1,85 @@
+	                Styles  
+- Styles are set of attributes defined for HTML elements to make the presentation more interactive and responsive.
+
+- Styles can be defined for HTML element by using 3 techniques:
+	1. Inline  Styles
+	2. Embeded Styles
+	3. CSS (Cascade Style Sheet)
+
+Inline Styles:
+- Styles are defined for every element individually using a "style" attribute in the tag.
+
+   Syntax:
+         <div style="attribute:value; attribute:value;..">
+         </div>
+
+- You can't re-use the styles defined within element.
+- It will be only for specified element.
+- We have to re-write the styles for every element.
+	
+Ex:
+<body>
+    <h2 style="background-color: darkcyan; color:white; text-align: center;">Welcome to HTML</h2>
+    <h2>CSS Examples</h2>
+    <h2>JavaScript Basics</h2>
+</body>            
+
+Embeded Styles:
+- In this technique the style attributes can be defined in a "<style>" element and placed in side the page.
+- You can place in <head> or <body>
+- You have to place in <head> section when you want the styles to load into memory on page request and use later for elements.
+- You have to place in <body> section when you want the styles to apply directly on page request. Not loading into memory.
+	<head>
+	 <style>
+	      selector {
+	          attribute:value;
+	          attribute:value;
+	      }
+	</style>
+	</head>
+- The embeded technique allows to re-use the styles within page.
+- The styles defined in a page are not accessible to other pages.
+
+Ex:
+<head>
+    <style>
+        h2 {
+            background-color: darkcyan;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to HTML</h2>
+    <h2>CSS Examples</h2>
+    <h2>JavaScript Basics</h2>
+</body>
+
+Cascade Style Sheet [CSS]:
+- The styles are defined in a separate file known as "stylesheet".
+- You can link the stylesheet to any HTML page.
+- Hence the styles are accessbile to any page.
+
+1. Create a new file by name
+	"effects.css"
+h2 {
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+
+2. Link to your HTML page
+
+<head>
+  <link rel="stylesheet" href="effects.css">
+</head>
+<body>
+    <h2>Welcome to HTML</h2>
+    <h2>CSS Examples</h2>
+    <h2>JavaScript Basics</h2>
+</body>
+
+- Using CSS from external file in HTML will increase the number of requests for page. hence page load time also increases.
+
+
