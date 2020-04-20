@@ -1,0 +1,85 @@
+Styles MIME Type:
+- Browser can use any external content in a page only when it can understand its type.
+- It is importent to tell about the content type to browser.
+- The content type is technically called as MIME Type
+       [Multi purpose Internet Mail Extentions]
+- The MIME type for styles is "text/css"
+
+Syntax: Embed
+<style type="text/css">
+    h2 {
+      color:red;
+    }
+  </style>
+
+Syntax: External
+<link rel="stylesheet" href="effects.css" type="text/css">
+
+
+	        Minification in CSS
+- Minification is a technique used for CSS and JavaScript in order to reduce the size of file.
+- It is a coding technique used to reduce the number of line in code but keep functionality same.
+- Minification can be done by using several minification tools like
+	- smalify
+	- css minifier
+	- ajax minifier
+
+Ex:
+1. Add a new folder into project by name
+		"Styles"
+2. Add a new Stylesheet into folder
+		"headings.css"
+  h2 {
+    background-color: yellow;
+    color:black;
+    text-align: center;
+    border:2px solid red;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+}
+
+3. Copy the code
+4. Goto the website "https://cssminifier.com/"
+5. Paste the original code
+6. Click "Minify Now" button
+7. Copy the minfied code
+8. Goto Project "Styles" folder
+9. Add a new file
+	"headings.min.css"
+10. paste the copied minified code
+11. Link the minified file to page
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../Styles/headings.min.css">
+    </head>
+    <body>
+        <h2>HTML</h2>
+        <h2>CSS</h2>
+        <h2>JavaScript</h2>
+    </body>
+</html>
+
+
+FAQ: Can we edit minfied file directly?
+A. Yes. But always do editing in original file and then minifiy.
+
+Note: Always use Original file while developing and the Minified file while publishing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
