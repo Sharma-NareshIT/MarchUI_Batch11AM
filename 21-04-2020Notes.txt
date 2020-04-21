@@ -1,0 +1,204 @@
+	         Selectors in CSS
+- Styles defined in "in-line" technique doesn't require selectors.
+               <div  style="attribute:value">
+               <h2  style="attribute:value">
+
+- Selector specifies where to apply the effects.
+- Selector is required in "Embed and CSS" technique
+
+Syntax:
+	selector
+	{
+	  attribute:value;
+	  attribute:value;
+	}
+- When  you write styles embed or in external file, you have to define selector.
+- The selectors used for styles are classified into several types.
+- The Primary selectors used for styles are
+	1. Type Selector
+	2. ID Selector
+	3. Class Selector
+
+1. Type Selector : It specifies the tag name, where the styles need to be applied.
+
+	         h2 {		p {	input {
+	          }		 }	}
+
+	      You can also group the tags.
+
+	        h2, p 
+	        {
+	        }
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+          h2, p
+          {
+              color:red;
+              text-align:center;
+          }
+      </style>  
+    </head>
+    <body>
+        <h2>HTML</h2>
+        <p>Markup Language</p>
+        <h2>CSS</h2>
+        <p>Makes intractive and responsive</p>
+        <h2>JavaScript</h2>
+        <p>Handles Client Side Interactions.</p>
+    </body>
+</html>
+
+DrawBack:
+ - The effects will apply to every element that is designed by using the given tag.
+ - You can't ignore effects for any specific element.
+
+2. ID selector : A selector can apply effects by using an unique ID given for element. Effects are not applied to every element. They are applied only to the element , which is using the ID. 
+	        Id selector is defined by using "#" and a reference name. It is accessible to any element by using "Id" attribute.
+
+Syntax:
+	          #refName 
+	          {
+	             attribute:value;
+	          }
+	         <div  id="refName">
+	         <p id="refName">
+
+Note: More than one element can you the ID defined for styles.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+          #effects
+          {
+              color:red;
+              text-align:center;
+              background-color: yellow;
+          }
+      </style>  
+    </head>
+    <body>
+        <h2 id="effects">Web Technolgoies</h2>
+        <h2>HTML</h2>
+        <p>Markup Language</p>
+        <h2>CSS</h2>
+        <p id="effects">Makes intractive and responsive</p>
+        <h2>JavaScript</h2>
+        <p>Handles Client Side Interactions.</p>
+    </body>
+</html>
+
+DrawBacks:
+- Every element can have only one ID.
+- If effects are categorized and designed with multiple ID's then an element can't access all categories of effects.
+	
+
+Syntax: Invalid
+
+<h2 id="textEffects" id="borderEffects">Web Technolgoies</h2>
+
+<h2 id="textEffects, borderEffects">Web Technolgoies</h2>
+
+<h2 id="textEffects borderEffects">Web Technolgoies</h2>
+
+3. Class Selector: A class selector allows multiple inheritence. Multiple categories of effects can be applied to single element.
+	             Class Selector is defined by using "." and it is accessible by using the keyword "class".
+	              Multiple classes are defined to single element separated with "blank space".
+
+Syntax:
+	     .className 
+	     {
+	      attribute:value;
+	      }
+	<div class="class1 class2 class3 ...">
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+          .textEffects {
+              color:red;
+              text-align: center;
+          }
+          .borderEffects {
+              border:2px solid darkcyan;
+              box-shadow: 2px 3px 4px darkcyan;
+          }
+          .backgroundEffects {
+              background-color: yellow;
+          }
+      </style>  
+    </head>
+    <body>
+        <h2 class="textEffects borderEffects backgroundEffects">Web Technolgoies</h2>
+        <h2>HTML</h2>
+        <p class="backgroundEffects textEffects">Markup Language</p>
+        <h2>CSS</h2>
+        <p class="borderEffects">Makes intractive and responsive</p>
+        <h2>JavaScript</h2>
+        <p>Handles Client Side Interactions.</p>
+    </body>
+</html>
+	       
+Ex: All types in one page
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+          h1 {
+              background-color: green;
+              text-align: center;
+              color:white;
+          }
+          .textEffects {
+              color:red;
+              text-align: center;
+          }
+          .borderEffects {
+              border:2px solid darkcyan;
+              box-shadow: 2px 3px 4px darkcyan;
+          }
+          .backgroundEffects {
+              background-color: yellow;
+          }
+          #bodyStyle {
+              width: 90%;
+              box-shadow: 2px 2px 4px red;
+              border:4px double red;
+              padding: 30px;
+          }
+      </style>  
+    </head>
+    <body id="bodyStyle">
+        <h1>UI Class</h1>
+        <h2 class="textEffects borderEffects backgroundEffects">Web Technolgoies</h2>
+        <h2>HTML</h2>
+        <p class="backgroundEffects textEffects">Markup Language</p>
+        <h2>CSS</h2>
+        <p class="borderEffects">Makes intractive and responsive</p>
+        <h2>JavaScript</h2>
+        <p>Handles Client Side Interactions.</p>
+    </body>
+</html>
+
+CSS 3&4 Selectors a Classified into following Groups
+ ===========================================
+1. Rational Selectors
+2. Attribute Selectors
+3. Pseudo Selectors
+4. Structural Pseudo Selectors
+
+
+
+
+
+
+
+
