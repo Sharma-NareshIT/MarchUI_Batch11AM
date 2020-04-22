@@ -1,0 +1,238 @@
+1. Type Selector
+2. ID Selector
+3. Class Selector
+
+Rational Selectors : They target elements based on the relationship between elements. i.e parent and child hierarchy.
+
+1. Decendent Selector: It will apply effects to the child element specified under a parent element. It will apply to all child elements i.e nested child.
+	
+Syntax:
+	ol li { 
+	}
+	div p {
+	}
+	dl dd {
+	}
+
+Ex:
+<head>
+    <style>
+        ol li {
+            background-color: yellow;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>HTML
+            <ul>
+                <li>Normal Elements</li>
+                <li>Void Elements</li>
+            </ul>
+        </li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ol>
+    <ul>
+        <li>Web Site</li>
+        <li>Web Page</li>
+        <li>URL</li>
+    </ul>
+</body>
+
+
+2. Child Selector: The child selector is defined by using ">" . It will apply to only direct child of element.
+
+
+Ex: Decendent Selector : It will effect to all paragraphs in Div.
+
+<head>
+    <style>
+       div p {
+           background-color: yellow;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Para-1</p>
+        <aside>
+            <p>Aside Para</p>
+        </aside>
+    </div>
+</body>
+
+Ex: Child Selector: It will apply only to paragraph that comes directly after div.
+
+<head>
+    <style>
+       div>p {
+           background-color: yellow;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Para-1</p>
+        <aside>
+            <p>Aside Para</p>
+        </aside>
+    </div>
+</body>
+
+3. Adjacent Selector  
+	+    Next adjacent element
+	~    All adjacent elements
+   h2+p { }   - only first paragraph - adjacent 	    immediatly after heading
+
+   h2~p { }  - all pargraphs under h2
+
+Ex: To all paragraphs under heading
+<head>
+    <style>
+       h2~p {
+           background-color:yellow;
+       }
+    </style>
+</head>
+<body>
+   <h2>HTML</h2>
+   <div>It is not a programming language</div>
+   <p>It is a markup language.</p>
+   <p>It is used for Presentation.</p>
+   <p>Developed by Tim Berners Lee</p>
+   <h2>JavaScript</h2>
+   <p>Client side interactions</p>
+   <h2>CSS</h2>
+   <p>Styles for elements</p>
+</body>
+
+EX: Only first paragraphs under heading - It must be immediate after the heading.
+
+<head>
+    <style>
+       h2+p {
+           background-color:yellow;
+       }
+    </style>
+</head>
+<body>
+   <h2>HTML</h2>
+   <p>It is a markup language.</p>
+   <p>It is used for Presentation.</p>
+   <p>Developed by Tim Berners Lee</p>
+   <h2>JavaScript</h2>
+   <p>Client side interactions</p>
+   <h2>CSS</h2>
+   <p>Styles for elements</p>
+</body>
+
+Attribute Selectors: These selectors are used to apply effects based on the attribute of any tag.
+
+input	: tag
+type   	: attribute
+value	: attribute
+class	: attribute
+size	: attribute
+
+
+Syntax:
+	tagName[attribute=value]
+	{
+	}
+
+Ex:
+<head>
+    <style>
+      input[type="button"] {
+          background-color: yellow;
+      }
+      input[name="txtAge"] {
+          background-color: lime;
+      }
+    </style>
+</head>
+<body>
+   <form>
+       <dl>
+           <dt>Name</dt>
+           <dd><input type="text" name="txtName"></dd>
+           <dt>Age</dt>
+           <dd><input type="number" name="txtAge"></dd>
+       </dl>
+       <input type="button" value="Submit">
+       <input type="button" value="Cancel">
+   </form>
+</body>
+
+Attribute value Starts With: [^=]
+Attribute value Ends With  : [$=]
+Attribute value any match  : [*=]
+Attribute value with hyphen : [|=]
+Attribute value with space : [~=]
+
+
+
+Ex1: Applies for only 1st para : It is Equal To
+
+<head>
+    <style>
+       p[name="Effects"] {
+           background-color: yellow;
+       }
+    </style>
+</head>
+<body>
+   <p name="Effects">Para-1</p>
+   <p name="TxtEffects">Para-2</p>
+   <p name="EffectsTxt">Para-3</p>
+   <p name="paraEffectsTxt">Para-4</p>
+</body>
+
+Ex: Apply for only para1 and para3 [start with]
+<head>
+    <style>
+       p[name^="Effects"] {
+           background-color: yellow;
+       }
+    </style>
+</head>
+<body>
+   <p name="Effects">Para-1</p>
+   <p name="TxtEffects">Para-2</p>
+   <p name="EffectsTxt">Para-3</p>
+   <p name="paraEffectsTxt">Para-4</p>
+</body>
+
+Ex3: para-1 and para-2  : End with
+
+<head>
+    <style>
+       p[name$="Effects"] {
+           background-color: yellow;
+       }
+    </style>
+</head>
+<body>
+   <p name="Effects">Para-1</p>
+   <p name="TxtEffects">Para-2</p>
+   <p name="EffectsTxt">Para-3</p>
+   <p name="paraEffectsTxt">Para-4</p>
+</body>
+
+Ex4: Anywhere in name
+
+<head>
+    <style>
+       p[name*="Effects"] {
+           background-color: yellow;
+       }
+    </style>
+</head>
+<body>
+   <p name="Effects">Para-1</p>
+   <p name="TxtEffects">Para-2</p>
+   <p name="EffectsTxt">Para-3</p>
+   <p name="paraEffectsTxt">Para-4</p>
+</body>
