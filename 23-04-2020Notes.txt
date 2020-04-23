@@ -1,0 +1,173 @@
+Pseudo Selectors: A selector appended to exiting selector to define additional behavior.
+
+div {	→ Type Selector
+ }
+#effect {	→ ID Selector
+}
+.effect {	→ Class Selector
+}
+
+div:PseudoSelector { 
+}
+
+It is used to apply effects by identifying the state of element i.e like mouse over, enabled, disabled, valid, readonly etc..
+
+1. :link         : It is used to define effects for a hyperlink
+	     in nomal state.
+
+2. :active	   : It specifies effects for a hyperlink when
+	     user hold down mouse button on link.
+
+3. :visited	   : It specifies effects for a hyperlink if
+	     its state is visited.
+
+Ex:
+<head>
+    <style>
+        a:link {
+            text-decoration: none;
+            color:black;
+        }
+        a:active {
+            color:blue;
+        }
+        a:visited {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+  <ol>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="http://www.google.com">Google</a></li>
+      <li><a href="http://amazon.in">Amazon Shopping</a></li>
+  </ol>
+</body>
+
+4. :hover : It specifies the effects for element when
+	 mouse pointer is over the element.
+
+Ex:
+<head>
+    <style>
+        a:link {
+            text-decoration: none;
+            color:black;
+        }
+        a:active {
+            color:blue;
+        }
+        a:visited {
+            color: green;
+        }
+        a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+        #pic {
+            width: 100px;
+            height: 100px;
+        }
+        #pic:hover {
+            width: 200px;
+            height: 200px;
+        }
+        h2 {
+            color:green;
+        }
+        h2:hover {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+  <h2>Mouse over Color will Change</h2>
+  <div align="center">
+      <img id="pic" src="../Images/earpods.jpg">
+  </div>
+  <ol>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="http://www.google.com">Google</a></li>
+      <li><a href="http://amazon.in">Amazon Shopping</a></li>
+  </ol>
+</body>
+
+5. :focus : It specifies effects for elements when they are in focus. You configure effects for the element or the other elements based on hierarchy.
+
+Ex:
+<head>
+    <style>
+        input[type="text"]:focus {
+            border-style: none;
+            box-shadow: 2px 3px 4px green;
+        }
+        input[type="text"]+span {
+            display: none;
+        }
+        input[type="text"]:focus+span {
+            display:inline;
+            color: red;
+        }
+        input[type="password"]+span {
+            display:none;
+        }
+        input[type="password"]:focus+span {
+            display:inline;
+        }
+        div {
+            margin-top: 10px;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+   <div>
+    Name :
+    <input placeholder="Block Letters 4 to 10 Only" type="text" pattern="[A-Z]{4,10}">
+    <span>Block Letters 4 to 10 Only</span>   
+   </div>
+   <div>
+       Password:
+       <input type="password" pattern="[a-z0-9]{4,10}">
+       <span>Password 4 to 10 chars lowercase only</span>
+   </div>
+</body>
+
+
+6. :checked    : It is used to verify a radio button or check box state checked or not. You define effects for checked and unchecked state.
+
+Ex:
+<head>
+    <style>
+        input[type="checkbox"]+span {
+            color:red;
+            font-weight: bold;
+        }
+        input[type="checkbox"]:checked+span {
+            color:green;
+            font-weight: bold;
+        }
+        #ads~img{
+            display:none;
+        }
+        #ads:checked~img {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Ads</legend>
+        <input type="checkbox" id="ads">Show Ads
+        <img src="../Images/pepsi.jpg" width="400" height="100">
+    </fieldset>
+    <fieldset>
+        <legend>Terms of Service</legend>
+        <textarea rows="4" cols="40" disabled>
+            our terms of service...
+        </textarea>
+        <br><br>
+        <input type="checkbox"> <span>I Accept</span>
+    </fieldset>
+</body>
+
