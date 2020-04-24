@@ -1,0 +1,159 @@
+7. :enabled    - It specifies effects to apply when
+	        element is in enabled state.
+
+8. :disabled   - It specifies effects to apply when 	     	       element is in disabled state.
+
+Note: You can disable any element by using HTML attribute : "disabled"
+
+9. :read-only   - It specifies effects to HTML element
+	        when its defined with readonly 
+	        attribute. You can define readonly for
+	        <input> and <textarea> .
+
+Ex:
+<head>
+    <style>
+        button:disabled {
+            cursor:not-allowed;
+            background-color: gainsboro;
+            border-style: none;
+        }
+        button:enabled {
+            cursor:grab;
+            background-color: green;
+            color:white;
+            border-style: none;
+        }
+        textarea:read-only {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    Terms of Service <br>
+    <textarea rows="4" cols="40" readonly>
+        Read our terms of service ...
+    </textarea>
+    <br> <br>
+    <button disabled>Register</button>
+</body>
+
+10. :required      - It defines effects for input element
+	            when assigned with "required"
+	            attribute.
+
+11. :optional       - It contains set of effects to all
+	            elements, which are not defined 
+	            required.
+
+Ex:
+<head>
+    <style>
+        input:optional {
+            border:1px solid yellow;
+            background-color: yellow;
+            box-shadow: 2px 3px 3px yellow;
+        }
+        input:required {
+            border:1px solid red;
+            box-shadow: 2px 3px 3px red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>Name</dt>
+            <dd><input type="text" required></dd>
+            <dt>Password</dt>
+            <dd><input type="password"></dd>
+        </dl>
+        <button>Submit</button>
+    </form>
+</body>
+
+12. :valid	  - It verifies the HTML validations defined
+	    for input element and apply effects when
+	    all are valid. The validations are defined
+	    by using attributes like
+		a) required
+		b) minlength
+		c) maxlength
+		d) pattern
+		e) email, url, etc..
+
+13. :invalid - It will apply effects to input element
+	    when the state is invalid i.e any 	    validation attribute returns invalid.
+
+
+Ex:
+<head>
+    <style>
+        input:invalid {
+            border:1px solid red;
+            box-shadow: 2px 2px 4px red;
+        }
+        input:valid {
+            border:1px solid green;
+            box-shadow: 2px 2px 4px green;
+        }
+        #txtName:valid+span{
+            display: none;
+        }
+        #txtName:invalid+span{
+            display: inline;
+            color:red;
+        }
+        #txtMobile:valid+span{
+            display: none;
+        }
+        #txtMobile:invalid+span{
+            display: inline;
+            color:red;
+        }
+        #txtEmail:valid+span{
+            display: none;
+        }
+        #txtEmail:invalid+span{
+            display: inline;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input id="txtName" type="text" minlength="4" pattern="[A-Z]{4,10}"><span>Name 4 to 10 Uppercase Only</span></dd>
+        <dt>Mobile</dt>
+        <dd><input id="txtMobile" type="text" pattern="\+91[0-9]{10}"><span>Invalid Mobile</span></dd>
+        <dt>Email</dt>
+        <dd><input id="txtEmail" type="email"><span>Invalid Email</span></dd>
+    </dl>
+</body>
+
+
+14. :in-range         ]  These are selectors that contain
+15. :out-of-range  ]   effects, which are applied when
+		input value is out of range.
+		i.e based on "min & max" 		attribute.
+
+Ex:
+<head>
+    <style>
+        input:in-range {
+            border: 1px solid green;
+            box-shadow: 2px 3px 3px green;
+        }
+        input:out-of-range {
+            border: 1px solid red;
+            box-shadow: 2px 3px 3px red;
+        }
+    </style>
+</head>
+<body>
+    Age : <input type="number" min="15" max="30">
+</body>
+
+Structural Selectors
+
+
