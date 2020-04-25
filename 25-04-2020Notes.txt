@@ -1,0 +1,246 @@
+:target    - It is a selector used with <a> anchor 	element. It applies effect based on the 
+	target when link clicked.
+               - It is used for intra document links.
+               - If element is the result of link target then
+	it can be highlighted
+Ex:
+<head>
+    <style>
+        div {
+            margin:10px;
+            padding:10px;
+            border:1px solid darkcyan;
+            background-color: lightyellow;
+        }
+        div:target {
+            margin:10px;
+            padding:10px;
+            border:1px solid darkcyan;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li><a href="#js">JavaScript</a></li>
+        <li><a href="#html">HTML</a></li>
+        <li><a href="#css">CSS</a></li>
+    </ol>
+    <div id="js">
+        <h2>JavaScript</h2>
+        <p>It is a language.</p>        
+    </div>
+    <div id="html">
+        <h2>HTML</h2>
+        <p>It is a Markup language</p>
+    </div>
+    <div id="css">
+        <h2>CSS</h2>
+        <p>It defines styles</p>
+    </div>
+</body>
+
+Structural Pseudo-Selectors:
+=======================
+	These are the selectors that apply effects based on Parent and Child hierarchy. It additionally uses the position of element in hierarchy.
+
+:first-child	: Apply to first child element
+:last-child		: Apply to last child element
+:nth-child()	: To any specific child element
+		  by its level number or by its
+		  occurance [odd, even].
+		Syntax:
+		  :nth-child(4)
+		  :nth-child(even)
+		  :nth-child(odd)
+
+Ex:
+<head>
+    <style>
+        ul li:first-child{
+            color:red;
+        }
+        ul li:last-child {
+            color:blue;
+        }
+        ul li:nth-child(4) {
+            color:green;
+        }
+        table>thead>tr {
+            background-color: darkcyan;
+            color: white;
+        }
+        table>tbody>tr:nth-child(odd) {
+            background-color: lightpink;
+        }
+        table>tbody>tr:nth-child(even){
+            background-color:lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" width="400">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>TV</td>
+                <td>45000.55</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>15000.55</td>
+            </tr>
+            <tr>
+                <td>Shoe</td>
+                <td>5000.55</td>
+            </tr>
+            <tr>
+                <td>T-Shirt</td>
+                <td>2000.55</td>
+            </tr>
+            <tr>
+                <td>Jeans</td>
+                <td>3000.55</td>
+            </tr>
+        </tbody>
+    </table>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+        <li>Angular</li>
+        <li>React</li>
+        <li>Node Js</li>
+    </ul>
+</body>
+
+:nth-of-type()	- It will apply effects for specific
+	                    level, and continue for every
+		  iterval if necessary. It can 
+		  even define where to start.
+		  It starts effect from top.
+
+		Syntax:
+		:nth-of-type(2)    - 2nd child
+		:nth-of-type(2n)  - every 2nd
+			             occurance.
+		:nth-of-type(2n+1) - every 2nd
+			                occurance
+			                starting with
+				one [1].
+:nth-last-of-type()     - It is similar to previous but it
+		 starts from bottom of list.
+
+Ex:
+<head>
+<style>
+       ul li:nth-last-of-type(2n+1) {
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+        <li>Angular</li>
+        <li>React</li>
+        <li>Node Js</li>
+    </ul>
+</body>
+
+
+
+:first-line		- It apply effects to the firstline
+:first-letter	- It apply effects to first letter.
+
+Ex:
+<head>
+    <style>
+        p::first-letter {
+            color:red; 
+            font-size: 200%;
+            font-family: cursive; 
+        }
+    </style>
+</head>
+<body>
+    <p>Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+    </p>
+</body>
+
+CSS Pseudo Element Selectors:
+ - CSS pseudo-element is a keyword added to a selector that lets you to define style a specific part of selected elements.
+- The keyword is added by using  ":"
+
+Syntax:
+     selector::pseudo-element {
+          property:value;
+     }
+
+- CSS provide pseudo-elements and pseudo-classes
+- The elements are
+	::after	
+	::before
+	::backdrop
+	::cue
+	::first-letter
+	::first-line
+	::marker
+	::placeholder
+	::selection
+	::spelling-error
+
+Note: You have to use additional plugin for using pseudo-elements for few browsers.
+	 ::-ms-selection	IE, Edge
+	 ::-webkit-selection  chrome, safari,
+	 ::-moz-selection      Firefox
+
+::selection   - It can define effects while selecting
+	      text.
+
+Ex:
+<head>
+    <style>
+        p::first-letter {
+            color:red; 
+            font-size: 200%;
+            font-family: cursive; 
+        }
+        p::selection {
+            background-color: yellow;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <p>Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+    </p>
+</body>
+
+
+::placeholder     -  It defines effect for placeholder in
+	             <input> element.
+
+
+Ex:
+<head>
+        input::placeholder{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    Name: <input type="text" placeholder="Max 10 chars Only" maxlength="10">
+</body>
+	
+	         CSS Effects
