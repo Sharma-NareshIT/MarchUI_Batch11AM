@@ -1,0 +1,73 @@
+	         CSS Values and Units
+- Color Values
+	a) color name
+	b) rgb()
+	c) hexadecimal
+
+- CSS Units : Numbers, Lengths and percentages
+
+	       Absolute Length Units
+	      ===================
+- They are not relative to any another element.
+- They define the unit directly to specified element.
+
+Unit	Name		Equivalent To
+---------------------------------------------------------------------------
+cm	Centimerter	1cm = 96px/2.54 [37px]
+mm	Millimeter		1mm = 1/10th of 1cm
+Q	Quater-millimeters	1Q = 1/40th of 1 cm
+in	Inches		1in = 2.54cm = 96px
+pc	Picas		1pc = 1/6th of 1 in
+pt	Point		1pt = 1/72th of 1 in
+px	Pixels		1px = 1/96th of 1 in
+
+
+	  Relative Length Units
+	  ==================
+- Relative length units are relative to existing contents in page.
+-They are related to parent or adjacent elements.
+
+Unit	Relative To
+---------------------------------------------------------------------------
+em	Font size of the parent will be applied to
+	child. If you increase the size in em then
+	it will be relative to parent.
+
+ex	x-height of the elements font
+
+ch	It is used to define width of glyph "0" 
+
+rem	Font size of the root element
+	[root-element :rem]
+
+lh	Line height of the element
+
+vw	1% of viewport's width. <meta>
+
+vh	1% of viewport's height.
+
+vmin          1% of viewports smaller dimension
+
+vmax	 1% of viewports larger dimension
+
+
+Note:  The size in % depends on the parent element, where as the vw depends on the viewport width.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
