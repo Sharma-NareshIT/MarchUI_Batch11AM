@@ -1,0 +1,109 @@
+	   CSS Backgrounds and Borders
+
+Backgrounds in CSS:
+
+1. background-color  : It defines a background color.
+
+Syntax:
+	body {
+	     background-color:yellow;
+	}
+
+2. background-image: It sets a background image.
+
+Syntax:
+ body {
+            background-image: url("../Images/logo.png");
+        }
+
+3. background-repeat: It is used to control the tiling behavior for image. It can be displayed as
+	no-repeat
+	repeat
+	repeat-x
+	repeat-y
+
+Syntax:
+    body {
+            background-image: url("../Images/logo.png");
+            background-repeat: no-repeat;
+        }
+
+4. background-size: It can take length or percentage value to size the image in order to fit inside the background. It can use:
+		px, em
+		%
+		cover   [fit to width]
+		contain [fit to height]
+ Syntax:
+      background-size: width  height ;
+      background-size: 100%  100%;
+      background-size: 200px 300px;
+      background-size: cover;
+
+5. background-position:  It allows to choose the position in which the background image appears. It uses X and Y co-ordinates. It can use the values
+	   - top left		center left
+	   - top center	center center
+	   - top right	center right
+	   
+	   - bottom left
+	   - bottom center
+	   - bottom right
+
+ Vertically : top, center, bottom
+ Horizontally: left, center, right
+
+ Syntax:
+	background-position: center center;
+	 background-position: 400px 200px;
+			     [x]      [y]
+
+6. background-attachment: It specifies how the background scrolls according to page content.It uses 
+	    - scroll
+	    - fixed
+
+Syntax:
+ body {
+            background-image: url("../Images/logo.png");
+            background-repeat: no-repeat;
+            background-size: 50% 50%;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+EX: Background multiple Images
+
+body {
+            background-image:url("../Images/star.png"), url("../Images/logo.png");
+            background-repeat: no-repeat, no-repeat;
+            background-position: center center, top right;
+        }
+
+7. background-clip:  It is used to control the alignment of background image upto
+	- content-box
+	- border-box
+	- padding-box
+
+Syntax:
+div {
+            text-align: justify;
+            border: 10px solid darkcyan;
+            padding:40px;
+            background-image: url("../Images/logo.png");
+            background-size: 100% 100%;
+            background-clip: content-box;
+        }
+
+
+
+
+Summary:
+- background
+- background-color
+- background-image
+- background-repeat
+- background-position
+- background-attachement
+- background-size
+- background-clip
+
+
+
