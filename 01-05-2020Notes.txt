@@ -1,0 +1,189 @@
+	         CSS Borders
+	         -------------------
+It is used to define a border style with size and color for any element in HTML.
+
+1. border	: all effects
+
+2. border-style : solid, double, dashed, groove etc..
+	border-left-style
+	border-right-style
+	border-top-style
+	border-bottom-style
+
+3. border-color
+	border-left-color
+	border-right-color
+	border-top-color
+	border-bottom-color
+4. border-width
+	border-left-width
+	border-right-width
+	border-top-width
+	border-bottom-width
+5. border-radius	
+	border-left-radius
+	border-right-radius
+
+Ex:
+<head>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            font-size: 2em;
+            border-top-style: double;
+            border-top-color:red;
+            border-top-width: 5px;
+            border-left-style: double;
+            border-left-color:blue;
+            border-left-width: 3px;
+            border-right-style: double;
+            border-right-color: red;
+            border-right-width: 3px;
+            border-bottom-style: double;
+            border-bottom-color: blue;
+            border-bottom-width: 5px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Border Effects
+    </div>
+</body>
+
+Ex: Short Hand Style
+
+  div {
+            width: 300px;
+            height: 100px;
+            font-size: 2em;
+            border-left:3px double red;
+            border-top:5px double red;
+            border-right: 3px solid green;
+            border-bottom: 5px solid green;
+        }
+
+  		(or)
+         div {
+	border: 1px solid red;
+               }
+
+	      CSS Text Directions
+	      -----------------------------
+CSS provides attributes to change the orientation of text in page. It provides "writing-mode" attribute with following values
+	- horizontal-tb (top-to-bottom)
+	- vertical-rl (right-to-left)
+                  - vertical-lr (left-to-right)
+
+Ex:
+<head>
+    <style>
+        .box {
+            border:2px solid darkcyan;
+            width: 300px;
+            padding: 10px;
+            margin-left: 10px;
+        }
+        .container {
+            display: flex;
+        }
+        .horizontal {
+            writing-mode: horizontal-tb;
+        }
+        .vertical {
+            writing-mode: vertical-rl;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box horizontal">
+            <h2>CSS Tutorial</h2>
+            <p>something about css in HTML.</p>
+        </div>
+        <div class="box vertical">
+            <h2>Naresh-I-Tehnologies</h2>
+            <p>hr@nareshit.in</p>
+        </div>
+    </div>
+</body>
+	
+	            CSS  OverFlow
+	            ---------------------
+- Overflow controls how content should display inside the container.
+- It is controlled by using "overflow" property
+	a) hidden
+	b) scroll
+	c) auto
+
+Syntax:
+	div {
+	   overflow:scroll;
+	 }
+
+Ex:
+<head>
+    <style>
+        div {
+            border:2px solid darkcyan;
+            padding: 5px;
+            width: 300px;
+            height: 100px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. </p>
+    </div>
+</body>
+
+	             CSS Text Styling
+1. Font Styling
+      color		: To define text color
+      font-family	: It defines font name :Arial
+      font-size	: To define the text size
+      font-style	: normal, italic, oblique
+      font-weight	: normal, bold, lighter, bolder
+      text-transform	: uppercase, lowercase,
+		  capitalize, full-width
+      text-decoration	: underline, overline, line-through
+		  none
+      text-shadow	: it defines a shadow
+      text-align	: left, center, right, justify
+      line-height	: space between line
+      letter-spacing	: space between letters
+      word-spacing	: space between words
+      font-variant	: caps, lowercase
+      text-indent	: First line spacing
+      text-overflow	: controls wrapping
+      white-space	: control the blank space
+      direction	: text direction
+      text-orientation	: change orientation
+      
+
+Ex:
+<head>
+    <style>
+        div {
+            color:red; 
+            font-size: 4em;
+            font-family: Arial;
+            font-style: italic;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Sample Text
+    </div>
+</body>
+
+
+
