@@ -1,0 +1,216 @@
+      color		: To define text color
+
+      font-family	: It defines font name :Arial
+
+      font-size	: To define the text size
+
+      font-style	: normal, italic, oblique
+
+      font-weight	: normal, bold, lighter, bolder
+
+      text-transform	: uppercase, lowercase,
+
+		  capitalize, full-width
+
+      text-decoration	: underline, overline, line-through
+
+		  none
+
+      text-shadow	: it defines a shadow
+
+      text-align	: left, center, right, justify
+
+      line-height	: space between line
+
+      letter-spacing	: space between letters
+
+      word-spacing	: space between words
+
+      font-variant	: caps, lowercase
+
+      text-indent	: First line spacing
+
+      text-overflow	: controls wrapping
+
+      white-space	: control the blank space
+
+      direction	: text direction
+
+      text-orientation	: change orientation
+
+Q:What are Web Safe Fonts?
+A. These are the fonts available across all browsers and systems.
+
+Q: List some web safe fonts?
+A:
+
+     Font Name	Generic Type
+     --------------------------------------------
+     Arial		sans-serif
+    Courier New	monospace
+    Georgia	serif
+    Times New Roman  serif
+     Trebunchet Ms	sans-serif
+     Verdana	sans-serif
+
+Q: What are default fonts?
+A. serif, sans-serif, mononspace, cursive, fantasy
+
+Syntax:
+    h2 {
+          font-family : Arial;
+         }
+
+Q: What are text-decoration effects?
+A:  underline, overline, none
+	a) text-decoration-line  :underline, overline
+	b) text-decoration-style:double, solid, wavy
+	c) text-decoration-color: any color
+
+Syntax:
+ <head>
+    <style>
+        div {
+            color:red; 
+            font-size: 4em;
+            font-family: Arial;
+            font-style: italic;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration-color: blue;
+            text-decoration-line: underline;
+            text-decoration-style: wavy;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Sample Text
+    </div>
+</body>
+
+text-shadow: It defines a shadow for text, it requires
+	      a) horizontal offset
+	      b) vertical offset
+	      c) blur radius
+	      d) color
+
+Syntax:
+       text-shadow: hOffset vOffset BluerRadius color;
+       text-shadow: 0px 4px 0px red;
+Ex:
+<head>
+    <style>
+        div {
+            color:black; 
+            font-size: 4em;
+            font-family: Arial;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 5px red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Sample Text
+    </div>
+</body>
+
+text-align:  It aligns the text horizontally left, center, right and justify.
+
+line-height:  It sets the height of each line. i.e spacing
+	    between line will increase.
+
+Syntax:
+ div {
+          text-align: justify;
+          line-height: 2em;
+        }
+
+ letter and word spacing:
+ a) letter-spacing
+ b) word-spacing
+
+Ex:
+  div {
+          text-align: justify;
+          line-height: 2em;
+          word-spacing: 15px;
+          letter-spacing: 3px;
+        }
+
+	         Text Layout Styles
+	          -------------------------
+1. text-indent:  It is used to define first line indent i.e
+	        the space for first line in a paragraph.
+
+Syntax:
+  div {
+          text-align: justify;
+          line-height: 2em;
+          text-indent: 100px;
+        }
+
+2. text-overflow: Defines how to control the 	           overflowed text in a container.
+	             [It uses overflow of css]
+
+	text-overflow : clip|ellipsis|delemiter|""
+
+
+3. white-space:  Defines how whitespace and associated line breaks inside the element are handled. [text-wrapping]
+	white-space: initial, inherit, nowrap
+
+Ex:
+<head>
+    <style>
+        div {
+          text-align: justify;
+          width: 300px;
+          border:2px solid darkcyan;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. 
+    </div>
+</body>
+
+
+4. word-break: It specifies whether line breaks to appear whenever the text overflow.
+	a) normal
+	b) break-all
+	c) keep-all
+	d) break-word
+
+<head>
+    <style>
+        div {
+          width: 300px;
+          border:2px solid darkcyan;
+          height: 100px;
+          margin: 0 auto;
+          word-break:break-all;
+          overflow: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Depending on how you obtained the abcdefafgfaaeufusllhdksjkajdjghjhhhahdsawerwerwerxdxfgsdfssdfsfsdfdfhdg hi hello how are you sfsdfsdfdsfdsfsdfsdfsdfsdfsdf. 
+    </div>
+</body>
+
+5. text-orientation: It specifies the orientation of text inside a container by using values:
+	a) mixed
+	b) upright
+	c) sideways
+     Text orientation requires "Writing-mode" 
+	a) vertical-rl
+	b) vertical-lr
+
+	           Styling of List
