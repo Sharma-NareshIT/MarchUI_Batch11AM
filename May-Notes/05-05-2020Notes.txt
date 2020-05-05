@@ -1,0 +1,156 @@
+	          CSS Positions
+1. position:fixed
+2. position:sticky
+
+EX:
+<head>
+    <style>
+        body {
+            width: 500px;
+            height: 1000px;
+            margin: 0 auto;
+        }
+        dt {
+            background-color: black;
+            color:white;
+            padding: 10px;
+            top:0px;
+            left:0px;
+            margin: 1em 0;
+            position: sticky;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Normal Elements</dd>
+        <dd>Void Elements</dd>
+        <dd>RC Data Elements</dd>
+        <dd>Raw Text Elements</dd>
+        <dt>CSS</dt>
+        <dd>ID Selector</dd>
+        <dd>Class Selector</dd>
+        <dd>Type Selector</dd>
+        <dd>Attribute Selector</dd>
+        <dt>JavaScript</dt>
+        <dd>Variables</dd>
+        <dd>Data Types</dd>
+        <dd>Operators</dd>
+        <dd>Statements</dd>
+    </dl>
+</body>
+
+3. position:static   : It is the default position. It is to
+		keep the element at its position.
+
+4. position:absolute: It keeps the position of any element with regard to the page.
+
+5. position:relative: It keeps the position of any element with regard to its parent element.
+
+
+
+FAQ: What is difference between margin-left and left?
+	div {
+	  margin-left: 10px;
+	 }
+	div {
+	  left : 10px;
+	 }
+A. Margin is always relative to the parent
+    Left is absolute in position.
+    [By Default Margin- Relative, Left - Absolute]
+
+ Note: left, right, top, bottom can be changed to relative. But margin is always relative it can't be absolute.
+
+
+Ex: 
+<head>
+    <style>
+        .parent {
+            width: 300px;
+            height: 200px;
+            border:4px solid darkcyan;
+            margin-left: 100px;
+            margin-top: 50px;
+        }
+        .child {
+            width: 100px;
+            height: 100px;
+            border:2px solid red;
+            background-color: yellow;
+            left: 0px;
+            top: 0px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+        </div>
+    </div>
+</body>
+  
+
+- In Style change  child - position:absolute, relative and see the change.
+
+Note: Position always along X and Y. CSS have Z- index position, which is used for 3D effects.
+
+
+	             Z-Index in CSS
+- It is used as the third position for any element on page, which can bring the content over existing or send behind existing.
+
+Ex:
+<head>
+    <style>
+        .OuterBox {
+            position: relative;
+            border:dashed;
+            height: 8em;
+            margin-bottom: 1em;
+            margin-top: 2em;
+            z-index:2;
+            background-color: lightyellow;
+        }
+        .InnerBox1 {
+            position: absolute;
+            background-color: darkcyan;
+            width: 80%;
+            left: 60px;
+            top: 3em;
+            z-index:1;
+        }
+        .InnerBox2 {
+            position: absolute;
+            background-color: yellow;
+            width: 20%;
+            left: 65%;
+            top: -25px;
+            height: 7em;
+            opacity:0.8;
+            z-index:2;
+        }
+        .InnerBox3 {
+            position: absolute;
+            background-color: green;
+            width: 50%;
+            left: 45%;
+            top: 15px;
+            height: 5em;
+            opacity:0.8;
+            z-index:3;
+        }
+    </style>
+</head>
+<body>
+    <div class="OuterBox">
+        Outer Box
+        <span class="InnerBox1">Inner Box-1</span>
+        <span class="InnerBox2">Inner Box-2</span>
+        <span class="InnerBox3">Inner Box-3</span>
+    </div>
+</body>
+
+
+		
