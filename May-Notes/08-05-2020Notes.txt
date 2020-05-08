@@ -1,0 +1,148 @@
+	Responsive Design with CSS
+
+Media Query: 
+ - It is a technique used in web development to make the page contents device friendly.
+- The media block is used to configure media options.
+	@media { }
+- If you know the browser window width you can directly define for specified width.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: yellow;
+            }
+            @media only screen and (max-width:600px) {
+                body {
+                    background-color: lightcyan;
+                }
+            }
+            @media only screen and (max-width:400px) {
+                body {
+                    background-color: lightgreen;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2>This page will change its background according to device screen width.</h2>
+    </body>
+</html>
+
+Ex: Changing the Layout of page according to device width.
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .row::after {
+                content: "";
+                clear: both;
+                display:block;
+            }
+            [class*="col-"] {
+                float: left;
+                padding: 15px;
+            }
+            html {
+                font-family: Arial;
+            }
+            .header {
+                background-color: darkcyan;
+                color:white;
+                padding: 15px;
+            }
+            .menu ul {
+                list-style-type: none;
+                margin:0px;
+                padding: 0px;
+            }
+            .menu li {
+                padding: 8px;
+                margin-bottom: 7px;
+                background-color: lightgreen;
+                color:white;
+                box-shadow: 2px 3px 4px black;
+            }
+            .menu li:hover {
+                background-color: darkgreen;
+            }
+            .aside {
+                background-color: darkmagenta;
+                color:white;
+                text-align: center;
+                font-size: 15px;
+                padding: 15px;
+                box-shadow: 1px 2px 3px black;
+            }
+            .footer {
+                background-color: darkcyan;
+                color:white;
+                text-align: center;
+                padding:15px;
+                font-size: 16px;
+            }
+            .col-1 { width: 8.30%;}
+            .col-2 { width: 16.60%;}
+            .col-3 { width: 25%;}
+            .col-4 { width: 33.30%;}
+            .col-5 { width: 40.30%;}
+            .col-6 { width: 50%;}
+            .col-7 { width: 58.30%;}
+            .col-8 { width: 68.30%;}
+            .col-9 { width: 75%;}
+            .col-10 { width: 80.30%;}
+            .col-11 { width: 90.30%;}
+            .col-12 { width: 100%;}
+
+            @media only screen and (max-width:768px) {
+                [class*="col-"] {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h2>Amazon Shopping</h2>
+        </div>
+        <div class="row">
+            <div class="col-3 menu">
+                <ul>
+                    <li>Electronics</li>
+                    <li>Footwear</li>
+                    <li>Fashion</li>
+                    <li>Watches</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <h2>About Us</h2>
+                <p>Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer.</p>
+            </div>
+            <div class="col-3 right">
+              <div class="aside">
+                <h2>Televisions</h2>
+                <p>Samsung, LG, Onida something about tv.</p>
+                <h2>Footwear</h2>
+                <p>Nike Casuals, Lee Cooper Boot, Sports, Running something about shoes.</p>
+                <h2>Fashion</h2>
+                <p>T-Shirt, Watches, Jeans, Sunglasses something about fashion.</p>
+              </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p><i>&copy; copyright 2020</i> <br> 
+                All rights reserved to Amazon India.
+            </p>
+        </div>
+    </body>
+</html>
+
