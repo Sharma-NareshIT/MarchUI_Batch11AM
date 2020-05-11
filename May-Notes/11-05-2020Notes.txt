@@ -1,0 +1,115 @@
+	        CSS Template Designs
+1. Breadcrumb Navigation: It is used for creating sitemaps. User can know about all topics and categories available in website.
+
+Ex:
+<head>
+    <style>
+        .container {
+            width:auto;
+            border:2px solid darkcyan;
+            height: 100px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 2px 3px 4px darkcyan;
+        }
+        ul {
+            list-style-type: none;
+        }
+        ul li {
+            font-size: 2em;
+        }
+        .breadcrumb ul {
+            display:flex;
+        }
+        .breadcrumb li::before {
+            content: "→";
+        }
+        .breadcrumb li:first-child::before {
+            content: "";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Electronics</a></li>
+                <li><a href="#">Mobiles</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+2. Card Style
+
+<head>
+    <style>
+       .cards {
+           display: grid;
+           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+           grid-gap:30px;
+       }
+       .card {
+           display: grid;
+           grid-template-rows: max-content 200px 1fr;
+           box-shadow: 1px 2px 4px darkcyan;
+           padding: 20px;
+       }
+       .card img {
+           object-fit: contain;
+           width: 100%;
+           height: 100%;
+       }
+       header {
+           color:black;
+       }
+       footer {
+           color:black;
+           text-align: center;
+       }
+    </style>
+</head>
+<body>
+    <div class="cards">
+            <article class="card">
+                <header>
+                    <h2>Laid Back Classics by Adnan Sami</h2>
+                </header>
+                <img src="../../Images/adnan.jpg">            
+                <div class="content">
+                    <p>Listen to the Classics of Adnan Sami</p>
+                </div>
+                <footer>
+                    <a href="#">Join Prime for ₹129/month to watch</a>
+                </footer>
+            </article>
+            <article class="card">
+                <header>
+                    <h2>Shoes</h2>
+                </header>
+                <img src="../../Images/nike.jpg">
+                <div class="content">
+                    <p>50% sales on all types of footwear from Nike</p>
+                </div>
+                <footer>
+                    <a href="#">Explore all Shoes</a>
+                </footer>
+            </article>
+            <article class="card">
+                <header>
+                    <h2>Speakers</h2>
+                </header>
+                <img src="../../Images/jblspeaker.jpg">
+                <div class="content">
+                    <p>70% sales on JBL Products</p>
+                </div>
+                <footer>
+                    <a href="#">Visit Store</a>
+                </footer>
+            </article>
+    </div>
+</body>
+
+
