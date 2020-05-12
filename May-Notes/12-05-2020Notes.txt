@@ -1,0 +1,189 @@
+	        Center Alignment
+- It keeps content to the center of page.
+- We need attributes
+	a) align-items
+	b) justify-content
+
+ Syntax:
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+Ex:
+<head>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border:2px solid darkcyan;
+            box-shadow: 2px 2px 4px darkcyan;
+            height: 400px;
+            background-image: url("../../Images/shoe.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+        form {
+            background-color: lightskyblue;
+            padding: 20px;
+            width: auto;
+            opacity: 0.8;
+            border-radius: 20px;
+            box-shadow: 2px 2px 4px black;
+        }
+        .form-group {
+            margin-top: 20px;
+        }
+        .form-control {
+            border-radius: 5px;
+            border:1px solid darkblue;
+            width: 300px;
+            height: 40px;
+        }
+        button {
+            width: 300px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: darkblue;
+            color:white;
+            border:1px solid black;
+        }
+        h2{ 
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <form>
+                <h2>User Login</h2>
+                <div class="form-group">
+                    <label>User Name</label>
+                    <div>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div>
+                        <input type="password" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button>Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+	                Badges
+- A badge is used for displaying numbering or count or other summary within the element.
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../../Fonts/css/all.css">
+    <style>
+        button {
+            width:200px;
+            height:40px;
+            border:1px solid darkred;
+            border-radius: 5px;
+        }
+        span {
+            margin-left: 5px;
+            width: 30px;
+        }
+        .badge {
+            background-color: darkcyan;
+            border-radius:5px;
+            color:white;
+            padding: 2px;
+            text-align: center;
+        }
+        .list-group li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            margin-top: 10px;
+            border-bottom: 2px dotted darkcyan;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:link {
+            color:white;
+        }
+        a:visited {
+            color:white;   
+        }
+    </style>
+</head>
+<body>
+    <h2>Badge Style</h2>
+    <button><span><span class="badge">4</span>Likes</span><span class="fa fa-thumbs-up"></span></button>
+    <h2>Table of Contents</h2>
+    <ul class="list-group">
+        <li>HTML Tutorial
+            <span class="badge"><a href="#">2</a></span>
+        </li>
+        <li>CSS Examples
+            <span class="badge">9</span>
+        </li>
+        <li>JavaScript Tutorial
+            <span class="badge">12</span>
+        </li>
+    </ul>
+</body>
+
+	                Pagination
+- Designing pagination for contents so that user can goto specific location using the page numbers.
+
+Ex:
+<head>
+    <style>
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+        .pagination {
+            list-style-type: none;
+            margin:0px;
+            padding:0px;
+            display: flex;
+        }
+        .pagination li {
+            margin: 0px 1px;
+            background-color: darkcyan;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        a {
+            text-decoration: none;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="pagination">
+            <li><a href="#"> &laquo; </a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#"> &raquo; </a></li>
+        </ul>
+    </nav>
+</body>
+
+
