@@ -1,0 +1,160 @@
+	             CSS 2D Transforms
+- CSS 2D Transform feature allows the elements to be transformed in 2 Dimensional space.
+- 2D is along X and Y axis.
+- "transform" is a property used to define 2D transforms.
+- It uses following transform functions:
+
+1. translate() : It is used to move the object from its current position to a new position along X and Y axis.
+
+   Syntax:
+	transform: translate(xPixels, yPixels);
+	transform: translateX(pixels);
+	transform: translateY(pixels);
+
+Note: Transform CSS effects are not supported on all browser directly. We have to use special plug-in for different browsers:
+	
+	Browser			Plugin-in
+	--------------------------------------------------------------
+	Chrome, Safari, Opera  	-webkit
+	FireFox			-moz
+	Internet Explorer 9		-ms
+
+ Syntax:
+      transform: translate(xPixels, yPixels); //standard
+      -webkit-transform:translate(100px, 200px)
+      -moz-transform:translate(100px, 200px)
+      -ms-transform:translate(100px, 200px)
+
+Ex:
+<head>
+    <style>
+        img {
+            margin-left: 10px;
+            transition: 2s;
+        }
+        img:hover {
+            transform: translate(400px, 400px);
+            -webkit-transform: translate(400px, 400px);
+            -moz-transform: translate(400px, 400px);
+            -ms-transform: translate(400px, 400px);
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <img src="../../Images/jblspeaker.jpg" width="200" height="200">
+</body>
+
+2. rotate() : It is used to rotate any element around its origin. It uses the value defined in angule with "deg" units.
+	transform:rotate('angle');
+	transform:rotateX('angle');
+	transform:rotateY('angle');
+ Use angle "-ve" value to rotate anti-clockwise
+
+Ex:
+<head>
+    <style>
+        .container {
+            width:100%;
+            height: 100%;
+            border:2px solid darkcyan;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+            color:red;
+            transition: 2s;
+        }
+        .box:hover {
+            transform: rotate(180deg);
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="box">
+           <img src="../../Images/jblspeaker.jpg" width="200" height="200">
+       </div>
+    </div>
+</body>
+
+3. scale() : It is used to increase or decrease the size of element along X and Y axis
+	 
+	transform:scale(sx, sy);
+	transform:scaleX();
+	transform:scaleY();
+	Scale units are defined in fractions:
+	1  = 100
+	1.5 = 150
+	2  = 200
+
+Ex:
+<head>
+    <style>
+        .container {
+            width:100%;
+            height: 100%;
+            border:2px solid darkcyan;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            transition: 2s;
+        }
+        img:hover {
+            transform: scale(5);
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+           <marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="10">
+           <img src="../../Images/jblspeaker.jpg">
+           <img src="../../Images/jeans.jpg">
+           <img src="../../Images/shoe.jpg">
+           <img src="../../Images/shirt.jpg">
+           </marquee>
+    </div>
+</body>
+
+4. skew() : It is used to tilt the image by specified angle.
+	transform:skew(sx, sy)
+		:skewX()
+		:skewY()
+
+Ex:
+<head>
+    <style>
+        .container {
+            width:100%;
+            height: 100%;
+            border:2px solid darkcyan;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            transition: 2s;
+        }
+        img:hover {
+            transform: skewX(60deg);
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+           <img src="../../Images/shirt.jpg">
+    </div>
+</body>
