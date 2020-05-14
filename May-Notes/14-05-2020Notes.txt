@@ -1,0 +1,128 @@
+CSS 2D Transform Methods
+-translate(x,y)
+-translateX()
+-translateY()
+-scale(x,y)
+-scaleX()
+-scaleY()
+-rotate()
+-skew(x,y)
+-skewX()
+-skewY()
+-matrix()
+
+Matrix method is used to define all 2D transforms to single element.
+
+Syntax:
+ matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY());
+
+Ex:
+<head>
+    <style>
+        div{ 
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border:2px solid red;
+        }
+        div#div1 {
+            transform: matrix(0.5,0,0.3,0.5,200,100);
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        Matrix Demo
+    </div>
+</body>
+
+		   CSS 3D
+- CSS 3D transforms allows 3 Dimensional design
+- It will have configuration for X, Y, and Z axis.
+- The methods used for 3D are similar to 2D but comprises of 3rd dimension.
+
+1.  translate3d(): It sets a new position of content along x, y and z-axis.
+
+  Syntax:
+	translate3d(tx, ty, tz);
+
+Ex:
+<head>
+    <style>
+        .container {
+            width: 100px;
+            height: 100px;
+            border:5px solid darkcyan;
+            background-image: url("../../Images/jblspeaker.jpg");
+            background-size: 100px 100px;
+            background-repeat: no-repeat;
+            margin:20px;            
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            border:1px dotted darkcyan;
+            opacity: 0.8;
+        }
+        .transform-effect {
+            transform: translate3d(0px, 0px, 0px);
+            transition: 2s;
+        }
+        .transform-effect:hover {
+            transform: translate3d(25px, 25px, 50px);
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <h2>3D Transform</h2>
+    <div class="container">
+        <img class="transform-effect" src="../../Images/jblspeaker.jpg">
+    </div>
+</body>
+
+2.  rotate3d(): It rotates the content along x, y and z-axis. It uses vector direction. It contains x, y, z and angle.
+
+       Syntax:
+	rotate3d(x,y,z, angle);
+
+Ex:
+<head>
+    <style>
+        .container {
+            width: 100px;
+            height: 100px;
+            border:5px solid darkcyan;
+            background-image: url("../../Images/jblspeaker.jpg");
+            background-size: 100px 100px;
+            background-repeat: no-repeat;
+            margin:20px;         
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            border:1px dotted darkcyan;
+            opacity: 1;
+        }
+        .transform-effect {
+            transform: rotate3d(0,0,0,0deg);
+            transition: 2s;
+        }
+        .transform-effect:hover {
+            transform: rotate3d(0,3,1,180deg);
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <h2>3D Transform</h2>
+    <div class="container">
+        <img class="transform-effect" src="../../Images/jblspeaker.jpg">
+    </div>
+</body>
+
+3. scale3d() : It changes the size of image in 3 dimensions x, y, z.
+
+Syntax:
+	scale3d(x,y,z)
+
