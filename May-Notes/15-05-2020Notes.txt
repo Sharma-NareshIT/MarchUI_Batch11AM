@@ -1,0 +1,141 @@
+		CSS Transition
+- CSS transitions is a module of CSS that lets you create gradual transition between the value of specic CSS properties. From initial state to final state how the behvarior of an element should be can be defined using Transition. 
+	  img {
+	      transform:scale(1);
+	  }   - initial
+	  img:hover {
+	      transform:scale(2);
+	  }  final
+- The behavior of transition can be controlled by using timing, duration and other attributes.
+
+- Transition in CSS comprises of following properties
+
+1. transition
+2. transition-dealy
+3. transition-duration
+4. transition-property
+5. transition-timing-function
+
+
+1. transition-delay : It specifies the amount of time to wait between a property's value changing and the start of the transition effects. 
+	           Dealy is the time taken to start the animation.
+
+Syntax:
+      transition-delay : 2s
+      transition-delay : 4ms;
+
+2. transition-duration: It specifies the amount of time to take in order to complete the transformation. i.e the time taken to change from initial state to final state or vice versa.
+
+
+Syntax:
+         transition-duration:2s
+
+Ex:
+<head>
+    <style>
+        .section {
+            width: 300px;
+            height: 150px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color:white;
+            font-size: 20px;
+            left:0px;
+            top:0px;
+            position: absolute; 
+            transition-duration: 2s;  
+            transition-delay: 2s;         
+        }
+        .box:hover {
+            width: 300px;
+            height: 150px;
+            background-color:yellow;
+            color:black;
+            font-size: 40px;
+            left: 200px;
+            top:0px;
+            position: absolute;
+            transition-duration: 2s;
+            transition-delay: 5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="box">
+            Test Effects
+        </div>
+    </div>
+</body>
+
+delay  : means how time to wait in order to start effect
+duration: time taken to complete animation.
+
+
+3. transition-property: It specifies which effects should transforms out of all defined effects.
+
+   Syntax:
+	transition-property : all;
+	transition-property : width, height;
+
+Ex:
+<head>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition-duration: 2s;
+            transition-property: width, height;
+        }
+        div:hover {
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+
+4. transition-timing-function: It uses pre-defined functions  that are used to control the animation effects for any element.
+
+a) ease
+b) linear
+c) ease-in
+d) ease-out
+e) ease-in-out
+f) cubic-beizer()
+g) steps()
+h) start
+i) end
+
+Ex:
+<head>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: width 2s;
+        }
+        div:hover {
+            width: 300px;            
+        }
+        #easeInOut {
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="easeInOut">
+
+    </div>
+</body>
