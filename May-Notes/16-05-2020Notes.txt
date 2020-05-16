@@ -1,0 +1,223 @@
+	             CSS Animations
+- CSS Animations are used to animate CSS transitions
+- You can reduce the use of Javascript for animations.
+- Animation can easily run on lowband width devices like mobile.
+- Animations will work even when JavaScript is disabled.
+- To create animation sequence in CSS we need
+	1. @keyframes
+	2. animation
+	3. animation-name
+	4. animation-duration
+	5. animation-timing-function
+	6. animation-delay
+	7. animation-iteration-count
+	8. animation-direction
+	9. animation-fill-mode
+	10. animation-play-state
+
+@keyframes :  
+- It is used to configure every frame in animation. 
+- At each keyframe we define effect for object. - Keyframes are defined with initial, final and intermediate steps in CSS animation.
+
+Syntax:
+	@keyframes  identifierName {
+	      from {
+	          // effects for initial state
+	      }
+	      to {
+	          // effects for final state
+	      }
+	}
+
+Syntax:
+	@keyframes identifier {
+	            0% { effects }
+	            40% { effects }
+	            80%{ effects }
+	            100% { effects }
+	 }
+
+Note: Keyframes are designed separetly and applied to any object by using the attribue "animation-name".
+
+Syntax:
+	 p {
+	       animation-name: KeyIdentifierName
+	   } 
+
+Ex:
+<head>
+    <style>
+        .container {
+            overflow: hidden;
+            height: 300px;
+            margin-top: 50px;
+            padding: 30px;
+        }
+        @keyframes slideIn {
+            from {
+                margin-left: 100%;
+                transform: scale(3);
+            }
+            to {
+                margin-left: 0%;
+                transform: scale(1);
+            }
+        }
+        h2 {
+            animation-name: slideIn;
+            animation-duration: 5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>CSS Animations</h2>
+    </div>
+</body>
+
+
+- You can add frames in between the start and end by using step percentage.
+
+Ex:
+<head>
+    <style>
+        .container {
+            overflow: hidden;
+        }
+        @keyframes slideIn {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+            75% {
+                font-size: 300%;
+                margin-left: 25%;
+                width: 150%;
+            }
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+        p {
+            animation-name: slideIn;
+            animation-duration: 5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.</p>
+    </div>
+</body>
+
+- You can make animation iteration - n number of times by using
+	"animation-iteration-count"
+
+Ex:
+<head>
+    <style>
+        .container {
+            overflow: hidden;
+        }
+        @keyframes slideIn {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+            75% {
+                font-size: 300%;
+                margin-left: 25%;
+                width: 150%;
+            }
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+        p {
+            animation-name: slideIn;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.</p>
+    </div>
+</body>
+
+- You can control the animation direction by using 
+	"animation-direction"
+
+Ex:
+<head>
+    <style>
+        .container {
+            overflow: hidden;
+            height: 400px;
+        }
+        @keyframes slideIn {
+            from {
+                margin-left: 100%;
+                transform: rotate(180deg);
+            }
+            to {
+                margin-left: 0%;
+                transform:rotate(0deg);
+            }
+        }
+        img {
+            width:20%;
+            height: 70%;
+            animation-name: slideIn;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../../Images/jblspeaker.jpg" width="100" height="100">
+    </div>
+</body>
+
+- You can set the delay time for effects
+<head>
+    <style>
+        .container {
+            overflow: hidden;
+            height: 400px;
+        }
+        @keyframes slideIn {
+            from {
+                margin-left: 100%;
+                transform: rotate(180deg);
+            }
+            to {
+                margin-left: 0%;
+                transform:rotate(0deg);
+            }
+        }
+        img {
+            width:20%;
+            height: 70%;
+            animation-name: slideIn;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 5s;
+            animation-timing-function: ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../../Images/jblspeaker.jpg" width="100" height="100">
+    </div>
+</body>
+
+	
+
