@@ -1,0 +1,63 @@
+Media Types
+- Media type is used to tell the browser what kind of media code is deifned.
+- Media code indicates for screen, for printing, speech.
+
+Ex: For Print and For Screen dipslay
+
+<head>
+    <style>
+        @media print {
+            body{
+                font-size: 30px;
+                font-family: Arial;
+                border:2px solid black;
+            }
+        }
+        body {
+            width: 90%;
+            border:4px double darkcyan;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 3px 2px 3px darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <p>Media type in CSS</p>
+</body>
+
+Media Type can use conditions by using "and" , "or".
+
+  @media screen and (width: 600px) {
+           body {
+               color:red;
+           }
+       }
+    exactly when it is 600px 
+
+   min-width :   starting with 600px i.e from 600
+   max-width:   ending with 600px i.e upto 600
+
+Ex:
+<style>
+       @media screen and (max-width: 600px) {
+           body {
+              background-color: yellow;
+           }
+       }
+</style>
+
+Media is also supported with orientation which changes the effects according to potrait and landscape appearence.
+
+Ex:
+<style>
+      @media(orientation: landscape) {
+        body {
+          width: 50%;
+          margin: 20px;
+          background-color: lightcoral;
+         }
+      }
+    </style>
+
+
