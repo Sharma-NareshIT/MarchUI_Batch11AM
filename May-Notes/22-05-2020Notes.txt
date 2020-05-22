@@ -1,0 +1,86 @@
+	               Bootstrap 4.5
+	               ===========
+- Bootstrap is one of the worlds largest repository of HTML, CSS and JavaScript.
+- Repository is a library with templates.
+- Tempalte is a pre-defined design, which you can customzie and implement according to your requirement.
+- Bootstrap is Learning about the Classes and Attributes, which have pre-defined functionality.
+
+
+1. Install Node JS in your computer, Node JS will provide a package manager called "NPM", which is used to install other libraries in your project.
+
+     - Visit -    https://nodejs.org/en/download/
+     - Download  "Windows - .msi"
+     - Install in your project
+     
+2. Test Node JS and NPM
+     - Open Windows Command Prompt [cmd]
+     - Type
+	C:\>node -v
+	C:\>npm -v
+
+3. Install Bootstrap for your project
+     - Open your project in VS - Code
+     - Open Terminal " Ctrl + ` "  backtick
+     - Type the following command
+
+     C:\UIDevelopment> npm install bootstrap
+       
+Note: Bootstrap Downloads and Installs all library files into a folder:
+	          C:\UIDevelopment
+	               |_node_modules
+	                  |_bootstrap
+     
+ *Any package or library that you install using NPM will be copied into "node_modules" folder.
+ 
+ *The packages that you install can be used only with in the current project.
+
+ *You have to install the library individually for every project.
+
+Bootstrap Files Hierarchy:
+=====================
+	       node_modules
+	          |_bootstrap
+	             |_dist
+	             |   |_css
+	             |   |_js
+	             |_site
+	             |_js
+	             |_scss
+
+Bootstrap for UI Development Initially requires the following files:
+
+CSS Files: [bootstrap  → dist → css]
+ -bootstrap.css	       [ Core Bootstrap CSS ]
+ -bootstrap.min.css
+
+ -bootstrap.grid.css	       [ for grid system ]
+ -bootstrap.reboot.css    [ reboot system ]
+
+JavaScript Files: [ bootstrap → dist → js ]
+ 
+ -bootstrap.js		[ Core ]
+ -bootstrap.bundle.js	[ All included ]
+
+
+ 
+ Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    </head>
+    <body class="container">
+        <h2>Bootstrap Demo</h2>
+        <button class="btn btn-outline-primary">Submit</button>
+        <div class="alert alert-success">
+            <button class="close">x</button>
+            <h3>Record will be deleted</h3>
+        </div>
+    </body>
+</html>
+
+  
+
+
+
+
