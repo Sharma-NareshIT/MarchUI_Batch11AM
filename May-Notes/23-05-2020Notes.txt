@@ -1,0 +1,121 @@
+	       Bootstrap Containers
+- Container is used for basic layout.
+- Container sets width and height with margin and padding.
+- Bootstrap provides 3 different containers
+	a) .container  - sets max-width 
+	b) .container-fluid - set width 100%
+	c) .container-{breakpoint}  
+
+Class		Screen
+		<576px
+.container		100%
+.container-sm	100%
+.container-md	100%
+.container-lg	100%
+.container-xl	100%
+.container-fuid 	100%
+
+small  - sm  is used if screen >= 576px
+medium - md is used if screen >= 768px
+large - lg  - is used if screen >=992px
+Extra large  - xl - is used if scren >=1200px
+.container-fulid - sets 100% for every screen
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+            .container-fluid {
+                padding-left: 50px;
+                padding-right: 20px ;
+            }
+        </style>
+    </head>
+    <body class="container-fluid text-justify">
+        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+    </body>
+</html>
+
+	        Bootstrap Contextual Colors
+Background Colors:
+.bg-primary
+.bg-secondary
+.bg-success
+.bg-danger
+.bg-warning
+.bg-info
+.bg-dark
+.bg-light
+	
+Text Colors:
+.text-primary
+.text-secondary  etc..
+.text-white
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+    <div class="text-white">
+        <div class="bg-primary">Primary</div>
+        <div class="bg-secondary">Secondary</div>
+        <div class="bg-success">Success</div>
+        <div class="bg-danger">Danger</div>
+        <div class="bg-warning">Warning</div>
+        <div class="bg-info">Info</div>
+        <div class="bg-dark">Dark</div>
+    </div> 
+    <div class="bg-light">light</div>       
+</body>
+
+
+
+
+
+
+
+	           Bootstrap Alerts
+- Alerts a used to display embeded dialog box with any specific message.
+- It can be dynamically handled according to requirement i.e you can open or close alerts.
+- Alerts are configured as a part of page.
+
+Classes:
+.alert	 	- display alert box
+.alert-primary, secondary, success, danger, warning..
+.alert-dismissable 	- It can show or hide alert in page
+.show		- It is used to set by default 
+		  display ON.
+
+JavaScript Attributes:
+data-dismiss      - It is used to close any component
+data-toggle         - To open and close any component
+
+Install JQuery 
+> npm install jquery
+
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h2>Alerts Demo</h2>
+    <div class="alert alert-danger alert-dismissible">
+        <button class="close" data-dismiss="alert">x</button>
+        <h2>Delete Record</h2>
+        Record will be Deleted ...
+    </div>   
+    <div class="alert alert-success alert-dismissible">
+        <button class="close" data-dismiss="alert">x</button>
+        <h2>Record Inserted</h2>
+        Record Inserted Successfully...
+    </div>       
+</body>
