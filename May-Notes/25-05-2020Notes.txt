@@ -1,0 +1,88 @@
+
+		Bootstrap Alert
+Classes :
+.alert
+.alert-heading
+.alert-link
+.alert-primary, success, danger etc..
+.alert-dismissible
+
+
+Attribute:
+data-dismiss     - It is used to close alert on button 	            click.
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h2>Alerts</h2>
+    <div class="alert alert-danger alert-dismissible">
+        <button class="close" data-dismiss="alert">X</button>
+        <h2 class="alert-heading">Delete Record</h2>
+        <p>Record will be deleted permanently.</p>
+        <a href="#" class="alert-link">Help?</a>
+    </div>
+</body>
+	           
+	        Bootstrap Badge
+Classes:
+.badge
+.badge-primary, secondary, success etc..
+.badge-pill [with border-radius]
+
+Ex:
+
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+    <h2>Badge</h2>
+    <div>
+        <a href="#" class="badge badge-primary badge-pill">Home</a>
+        <a href="#" class="badge badge-primary badge-pill">About</a>
+        <a href="#" class="badge badge-primary badge-pill">Contact</a>
+    </div>
+    <div>
+        <span class="badge badge-success">1</span>
+        <span>HTML</span>
+    </div>
+    <div>
+        <span class="badge badge-success">2</span>
+        <span>CSS</span>
+    </div>
+    <div>
+        <span class="badge badge-success">3</span>
+        <span>JavaScript</span>
+    </div>
+    <div>
+        <button><span class="badge badge-warning">5</span><span>Likes</span></button>
+    </div>
+</body>
+
+	          Bootstrap BreadCrumb
+Classes:
+.breadcrumb
+.breadcrumb-item
+.active
+.disabled
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <h2>NareshIT | Hyderabad</h2>
+    <nav>
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item active"><a >Home</a></li>
+            <li class="breadcrumb-item"><a >About</a></li>
+            <li class="breadcrumb-item disabled"><a >Contact</a></li>
+        </ul>
+    </nav>
+</body>
+
+	            Buttons
+
+
