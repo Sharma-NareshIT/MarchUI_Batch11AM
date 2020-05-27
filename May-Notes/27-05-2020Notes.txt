@@ -1,0 +1,213 @@
+		Carousel Controls
+- Allow navigation to previous and next slides.
+
+Classes:
+.carousel-control-prev
+.carousel-control-next
+.carousel-control-prev-icon
+.carousel-control-next-icon
+
+Note: All carousel controls must be inside "carousel"
+         Navigation is defined by using "<a>" element
+
+JQuery Plugin:
+data-slide		- It specifies slide to previous or next.
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+   <div class="carousel slide" id="slidingBanners" data-ride="carousel">
+     <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../Images/slide1.PNG" class="w-100 d-block">
+        </div>
+        <div class="carousel-item">
+            <img src="../Images/slide2.PNG" class="w-100 d-block">
+        </div>
+        <div class="carousel-item">
+            <img src="../Images/slide3.PNG" class="w-100 d-block">
+        </div>
+     </div>
+     <a class="carousel-control-prev" data-slide="prev" href="#slidingBanners">
+         <span class="carousel-control-prev-icon"></span>
+     </a>
+     <a class="carousel-control-next" data-slide="next" href="#slidingBanners">
+         <span class="carousel-control-next-icon"></span>
+     </a>
+   </div>
+</body>
+
+		Carousel with Indicators
+- Indicators allow to navigate to any specific slide
+
+Classes:
+.carousel-indicators	  : It is a collection of indicators
+		    <ol> or <ul>
+
+Plugins:
+data-target	: It indicates carousel "id"
+data-slide-to	: It specified slide number to navigate
+		  starting with 0.
+
+Note: Indicators a defined above the "carousel-inner"
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+   <div class="carousel slide" id="slidingBanners" data-ride="carousel">
+     <ol class="carousel-indicators">
+         <li data-target="#slidingBanners" data-slide-to="0" class="active"></li>
+         <li data-target="#slidingBanners" data-slide-to="1"></li>
+         <li data-target="#slidingBanners" data-slide-to="2"></li>
+     </ol>
+     <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../Images/slide1.PNG" class="w-100 d-block">
+        </div>
+        <div class="carousel-item">
+            <img src="../Images/slide2.PNG" class="w-100 d-block">
+        </div>
+        <div class="carousel-item">
+            <img src="../Images/slide3.PNG" class="w-100 d-block">
+        </div>
+     </div>
+     <a class="carousel-control-prev" data-slide="prev" href="#slidingBanners">
+         <span class="carousel-control-prev-icon"></span>
+     </a>
+     <a class="carousel-control-next" data-slide="next" href="#slidingBanners">
+         <span class="carousel-control-next-icon"></span>
+     </a>
+   </div>
+</body>
+
+	      Fading Animation for Slides
+Ex:
+<div class="carousel slide carousel-fade" id="slidingBanners" data-ride="carousel">
+
+	       Time Interval for Slide
+- You can control the time interval between slides by using the plugin "data-interval"
+
+- Every slide can have different time intervals.
+
+
+Ex:
+ <div class="carousel-item active" data-interval="5000">
+     <img src="../Images/slide1.PNG" class="w-100 d-block">
+ </div>
+
+		  Bootstrap Collapse
+-It is used for showing or hinding any content on page.
+-Dynamically you can show or hide
+
+Classes:
+.collapse
+.collapsing
+.collapse.show
+
+Puligins:
+data-target     : Specifies the ID of container to collapse
+	        is required for button controls.
+	        If you are using an <a> element you can
+	        defined by using "href".
+
+data-toggle    : To collapse and open container.
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+  <h2>Collaspe Demo</h2>
+  <div>
+      <dl>
+          <dt>Name</dt>
+          <dd>JBL Speakers</dd>
+          <dd>
+              <button class="btn btn-primary" data-toggle="collapse" data-target="#previewProduct">Preview</button>
+              <a href="#previewProduct" data-toggle="collapse" class="btn btn-link">View Details</a>
+          </dd>
+      </dl>
+  </div>
+  <div class="collapse" id="previewProduct">
+      <img src="../Images/jblspeaker.jpg" width="100" height="100">
+      <br>
+      <i><b>&#8377; 5000.43</b></i>
+  </div>
+</body>
+
+		Bootstrap Card
+- It allows to arrange contents into containers that can span into rows and columns.
+
+Classes:
+.card-deck
+.card
+.card-header
+.card-body
+.card-footer
+.card-title
+.card-link
+.card-text
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+</head>
+<body class="container-fluid">
+    <h2>Card Bootstrap</h2>
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">JBL Speakers</h2>
+            </div>
+            <div class="card-body">
+                <img src="../Images/jblspeaker.jpg" width="100" height="100">
+            </div>
+            <div class="card-footer">
+                <b><i>&#8377; 5600.55</i></b>
+                <br>
+                <button class="btn btn-danger"><span class="fa fa-shopping-cart"></span>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Nike Casuals</h2>
+            </div>
+            <div class="card-body">
+                <img src="../Images/nike.jpg" width="100" height="100">
+            </div>
+            <div class="card-footer">
+                <b><i>&#8377; 8600.55</i></b>
+                <br>
+                <button class="btn btn-danger"><span class="fa fa-shopping-cart"></span>Add to Cart</button>
+                <a href="#" class="card-link">View More..</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Lee Boot</h2>
+            </div>
+            <div class="card-body">
+                <img src="../Images/shoe1.jpg" width="100" height="100">
+            </div>
+            <div class="card-footer">
+                <b><i>&#8377; 4200.55</i></b>
+                <br>
+                <button class="btn btn-danger"><span class="fa fa-shopping-cart"></span>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+
