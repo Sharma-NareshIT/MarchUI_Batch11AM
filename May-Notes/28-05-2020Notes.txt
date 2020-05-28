@@ -1,0 +1,157 @@
+Ex: Card with Image-top
+
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+</head>
+<body class="container-fluid">
+    <h2>Card Bootstrap</h2>
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="../Images/jblspeaker.jpg" width="100" height="100">
+            <div class="card-header">
+                <h2 class="card-title">JBL Speakers</h2>
+            </div>
+            <div class="card-body">
+               
+            </div>
+            <div class="card-footer">
+                <b><i>&#8377; 5600.55</i></b>
+                <br>
+                <button class="btn btn-danger"><span class="fa fa-shopping-cart"></span>Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Nike Casuals</h2>
+            </div>
+            <div class="card-body">
+                <img src="../Images/nike.jpg" width="100" height="100">
+            </div>
+            <div class="card-footer">
+                <b><i>&#8377; 8600.55</i></b>
+                <br>
+                <button class="btn btn-danger"><span class="fa fa-shopping-cart"></span>Add to Cart</button>
+                <a href="#" class="card-link">View More..</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Lee Boot</h2>
+            </div>
+            <div class="card-body">
+                <img src="../Images/shoe1.jpg" width="100" height="100">
+            </div>
+            <div class="card-footer">
+                <b><i>&#8377; 4200.55</i></b>
+                <br>
+                <button class="btn btn-danger"><span class="fa fa-shopping-cart"></span>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+	           Bootstrap Accordion
+	           ==================
+- It is a collection of cards which you can switch between display dynamically. It uses collapse and card with accordion.
+- It requires ".accordion" class
+
+Note: All cards must be in accordion with collapse.
+         All collapse container must map to 
+	"data-parent=accordionId"
+
+Ex:
+
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+<h2>Online Tutorial</h2>
+<div class="accordion" id="tutorialAccordion">
+    <div class="card">
+        <div class="card-header">
+            <h2>
+                <button class="btn btn-danger btn-block" data-toggle="collapse" data-target="#htmlCollapse" >HTML Tutorial</button>
+            </h2>
+        </div>
+        <div id="htmlCollapse" class="collapse show" data-parent="#tutorialAccordion">
+          <div class="card-body">
+            <p><b>HTML is </b> you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+          </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h2>
+                <button class="btn btn-danger btn-block" data-toggle="collapse" data-target="#jsCollapse" >JavaScript Basics</button>
+            </h2>
+        </div>
+        <div class="collapse" id="jsCollapse" data-parent="#tutorialAccordion">
+            <div class="card-body">
+                <p> <b>JavaScript is </b>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h2>
+                <button class="btn btn-danger btn-block" data-toggle="collapse" data-target="#cssCollapse" >CSS Examples</button>
+            </h2>            
+        </div>
+        <div class="collapse" id="cssCollapse" data-parent="#tutorialAccordion" >
+            <div class="card-body">
+                <p> <b>CSS is </b>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+	                Bootstrap DropDowns
+- All use bootstrap dropdown for navigation
+- Don't use bootstrap dropdown for interactions like adding, removing items dynamically. For that you better prefer using HTML <select>
+
+
+Classes:
+.dropdown	It creates a dropdown
+.dropdown-menu	It is a collection of items in dropdown
+.dropdown-item	It refers individual dropdown item.
+.dropdown-toggle	It uses ON/OFF effects
+.dropdwon-divider	It sets a horizontal line as divider
+
+Note: Bootstrap Dropdown require "popper.js" which you can get from "bootstrap.bundle.js"
+
+Plugins:
+data-toggle
+data-target
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+  <h2>Naresh-I-Technologies</h2>
+  <div class="btn-toolbar bg-secondary">
+    <div class="btn-group">
+     <button class="btn btn-secondary"> <span class="fa fa-home"></span> Home</button>
+     <div class="dropdown">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Select Category</button>
+        <div class="dropdown-menu bg-warning">
+            <a class="dropdown-item active" href="#"><span class="fa fa-tv"></span>Electronics</a>
+            <a class="dropdown-item" href="#"><span class="fa fa-shoe-prints"></span>Footwear</a>
+            <a class="dropdown-item" href="#"><span class="fa fa-tshirt"></span>Fashion</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#"><span class="fa fa-shopping-cart"></span>Your Cart Items</a>
+        </div>
+     </div>
+    </div>
+  </div>
+</body>
+
+
