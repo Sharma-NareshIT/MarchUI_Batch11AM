@@ -1,0 +1,175 @@
+	            Forms in Bootstrap
+- Bootstrap provides a set of classes for presenting forms and its controls.
+
+Classes:
+.form-group    : It is to display a group of form elements
+	         that belong to a category.
+
+.form-control  : It is for controls inside form like textbox,
+	         dropdown, textarea etc..
+
+.form-control-file :  It is for <input type="file">
+
+.form-control-range:  It is for <input type="range">
+
+.form-check	:  Group of label and control
+.form-check-input	:  checkbox and radios
+.form-check-label	:  it is for label used to display text
+
+.form-control-lg	: large
+.form-control-sm	: small
+.form-inline	: for inline form [horizontal]
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .frmRegister {
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            border:2px solid darkcyan;
+            box-shadow: 2px 3px 4px darkcyan;
+            border-radius: 5px;
+            padding: 20px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+  <h2>Naresh-I-Technologies</h2>
+  <div class="form-group">
+     <div class="form-inline">
+         <input class="form-control" type="text" placeholder="User Name">
+         <input class="form-control" type="text" placeholder="Password">
+         <button class="btn btn-primary">Login</button>
+     </div>
+  </div>
+  <div class="frmRegister">
+    <h3 class="text-center text-primary">Register User</h3>
+    <form>
+      <div class="form-group">
+          <label>User Name</label>
+          <div>
+            <input type="text" class="form-control">
+          </div>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <div>
+            <input type="password" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Your City</label>
+        <div>
+            <select class="form-control">
+                <option>Select City</option>
+                <option>Delhi</option>
+                <option>Chennai</option>
+            </select>
+        </div>
+      </div>
+      <div class="form-group">
+          <label>Choose Gender</label>
+          <div class="form-check">
+              <input type="radio" name="gender" class="form-check-input"> <label class="form-check-label">Male</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="gender" class="form-check-input"> <label class="form-check-label">Female</label>
+          </div>
+      </div>
+      <div class="form-group">
+        <label>Upload Photo</label>
+        <div>
+            <input type="file" class="form-control-file">
+        </div>
+      </div>
+      <div class="form-group">
+          <label>Age</label>
+          <div>
+              <input type="range"  class="form-control-range">
+          </div>
+      </div>
+      <div class="form-group text-center">
+          <button class="btn btn-primary">Register</button>
+          <button class="btn btn-danger">Cancel</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+	           Bootstrap Input Group
+- It is used to group all form elements to display as a single element.
+
+Classes:
+.input-group
+.input-group-prepend
+.input-group-append
+.input-group-text
+.input-group-sm
+.input-group-lg
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+    <style>
+        .searchBox {
+            width: 70%;
+            margin:auto;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+   <div class="searchBox">
+      <div class="input-group">
+          <div class="input-group-prepend">
+              <select class="input-group-text">
+                  <option>All</option>
+                  <option>Electronics</option>
+                  <option>Shoes</option>
+              </select>
+          </div>
+          <input type="text" class="form-control">
+          <div class="input-group-append">
+           <button class="btn btn-danger">
+               <span class="fa fa-search-location"></span>
+           </button>     
+          </div>
+      </div>
+   </div>
+   <div class="searchBox">
+       <div class="input-group">
+           <div class="input-group-prepend">
+              <span class="input-group-text">&#8377;</span>
+           </div>
+           <input type="text" class="form-control">
+           <div class="input-group-append">
+              <span class="input-group-text">.00</span>
+           </div>
+       </div>
+   </div>
+   <div class="searchBox">
+     <div class="input-group">
+        <input type="text" class="form-control" placeholder="Your email">
+        <div class="input-group-append">
+            <span class="input-group-text">@gmail.com</span>
+        </div>
+     </div>
+   </div>
+   <div class="searchBox">
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <div class="input-group-append input-group-prepend">
+                <span class="input-group-text">@</span>
+            </div>
+            <input type="text" class="form-control">
+        </div>
+   </div>
+</body>
+
+
