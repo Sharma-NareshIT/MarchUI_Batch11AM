@@ -1,0 +1,107 @@
+		Bootstrap Modal
+- Modal is used for displaying a Dialog Box
+- You can dynamically open and close dialog.
+
+Classes:
+.modal			: Configures a Modal
+.modal-dialog	                : It defines dialog box in modal
+.modal-content		: Content in dialog
+.modal-header		: header section in content
+.modal-body		: body section in content
+.modal-footer		: footer section in content
+.modal-title		: for titles 
+.modal-dialog-scrollable	: overflow as scroll
+.modal-dialog-centered	: centers the dialog
+
+Plugins
+data-toggle	: ON the dialog
+data-target	: Refers to specific dialog by Id
+data-dismiss	: Close the dialog
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+  <div class="btn-toolbar bg-danger" style="margin-top: 30px;">
+    <div class="btn-group">
+        <button class="btn btn-danger" data-toggle="modal" data-target="#registerModal">Register</button>
+        <button class="btn btn-danger" data-toggle="modal" data-target="#loginModal" >Login</button>
+    </div>
+  </div>
+  <div class="modal fade" id="registerModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Register</h2>
+                <button class="close" data-dismiss="modal">x</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-inline">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                <button class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">User Login</h2>
+                <button class="close" data-dismiss="modal">x</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <div>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div>
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success">Login</button>
+                <button class="btn btn-danger" data-dismiss="modal" >Cancel</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+
+		 Bootstrap Nav
+- Basic navigation for page is designed.
+- You can convert a list of items and display as menu items for navigation.
+
+Classes:
+.nav		:It is to display navigation bar
+.nav-item		: Item in navigation
+.nav-link		: Style for link in navigation
+.nav-tabs		: It display a tab style
+.nav-pills		: It display a button style
+
+Note: nav-tabs is used with combination of "tab" control in bootstrap.
+
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+  <h2>Naresh-I-Technologies</h2>
+  <ul class="nav nav-tabs">
+      <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      <li  class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+  </ul>
+</body>
