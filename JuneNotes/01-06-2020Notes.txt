@@ -1,0 +1,199 @@
+		Bootstrap Tab Content
+		 ===================
+- Tab content is used with combination of Tabs
+- Tab Content comprises of tab-pane
+- Classes 
+	.tab-content
+	.tab-pane
+	.show	 → to display
+	.active	→ to define active tab
+JQuery Plugin:
+data-toggle ="tab"
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+  <h2>Naresh-I-Technologies</h2>
+  <ul class="nav nav-tabs">
+      <li class="nav-item active"><a href="#home" data-toggle="tab" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="#about" data-toggle="tab" class="nav-link">About</a></li>
+      <li  class="nav-item"><a href="#contact" data-toggle="tab" class="nav-link">Contact</a></li>
+  </ul>
+  <div class="tab-content" id="topics">
+    <div class="tab-pane fade show active" id="home">
+       <h4>Home Page</h4>
+       <p>This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.</p>
+    </div>
+    <div class="tab-pane fade" id="about">
+      <h4>About Us</h4>
+      <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+    </div>
+    <div class="tab-pane fade" id="contact">
+      <h4>Contact Us</h4>
+      Naresh-I-Technologies | Hyderabad
+      <br>
+      hr@nareshit.in
+    </div>
+  </div>
+</body>
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <h2>Register Students</h2>
+    <ul class="nav nav-tabs">
+        <li class="nav-item active"><a class="nav-link" data-toggle="tab" href="#personalDetails">Personal Details</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#courseDetails">Course Details</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#addressDetails">Address</a></li>
+    </ul>
+    <div class="tab-content" id="registerForm">
+        <div class="tab-pane show active fade" id="personalDetails">
+            <h4>Your Personal Details</h4>
+            <dl>
+                <dt>Name</dt>
+                <dd><input type="text"></dd>
+                <dt>Email</dt>
+                <dd><input type="email"></dd>
+            </dl>
+            <a data-toggle="tab" class="btn btn-primary" href="#courseDetails">Next</a>
+        </div>
+        <div class="tab-pane" id="courseDetails">
+            <h4>Course Details</h4>
+            <dl>
+                <dt>Course Name</dt>
+                <dd>
+                    <select>
+                        <option>UI Technolgies</option>
+                        <option>Java</option>
+                        <option>.NET</option>
+                    </select>
+                </dd>
+                <dt>Class Timing</dt>
+                <dd>
+                    <input type="datetime-local">
+                </dd>
+            </dl>
+            <a data-toggle="tab" class="btn btn-primary" href="#addressDetails">Next</a>
+        </div>
+        <div class="tab-pane" id="addressDetails">
+            <h4>Address</h4>
+            <textarea rows="4" cols="40">
+
+            </textarea>
+            <br>
+            <a data-toggle="tab" class="btn btn-primary" href="#courseDetails">Previous</a>
+            <a class="btn btn-success">Register</a>
+        </div>       
+    </div>
+</body>
+
+	              Nav-Bar in Bootstrap
+	             ==================
+- It is used for Main navigation for website.
+- It is responsive , which can change according to device screen width.
+
+Classes:
+.navbar
+.navbar-expand-lg, sm
+.navbar-dark, light
+.navbar-brand	[ title ]
+.navbar-toggler	[ button for menu]
+.navbar-toggler-icon [ icon for button]
+.navbar-nav  [to design navigation items]
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">Naresh-I-Technolgoies</a>
+        <button type="button" data-toggle="collapse" data-target="#navigationItems" class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       
+        <div class="collapse navbar-collapse" id="navigationItems">
+           <ul class="navbar-nav">
+             <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+             <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+             <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+           </ul>
+        </div>
+    </nav>
+</body>
+
+		  Bootstrap Pagination
+- It is a pre-defined style for Pagination.
+- Defines Page navigation items like previous, next , first , last etc.
+
+Classes:
+.pagination
+.page-item
+.page-link
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid"> 
+  <ul class="pagination">
+      <li class="page-item"><a class="page-link">&laquo;</a></li>
+      <li class="page-item active"><a class="page-link">1</a></li>
+      <li class="page-item"><a class="page-link">2</a></li>
+      <li class="page-item"><a class="page-link">3</a></li>
+      <li class="page-item"><a class="page-link">&raquo;</a></li>
+  </ul>
+</body>
+
+		Bootstrap Spinners
+		================
+- To display the status of any task in page.
+
+Classes
+.spinner-border [sm]
+.spinner-grow [sm]
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+   <h2>Spinners</h2>
+   <dl>
+       <dt>Border Style</dt>
+       <dd>
+           <span class="spinner-border"></span>
+           <span class="spinner-border text-primary"></span>
+           <span class="spinner-border text-danger"></span>
+       </dd>
+       <dd>
+           <button class="btn btn-primary">
+               <span class="spinner-border spinner-border-sm"></span>
+               Loading
+           </button>
+       </dd>
+       <dt>Grow Style</dt>
+       <dd>
+           <span class="spinner-grow"></span>
+           <span class="spinner-grow text-primary"></span>
+           <span class="spinner-grow text-danger"></span>
+       </dd>
+   </dl>
+</body>
