@@ -1,0 +1,176 @@
+	             Bootstrap Utilities
+- Bootstrap provides predefined classes for handling text, border, margin, spacing, padding etc, which are know as utilities.
+
+1. Borders
+    	.border
+	.border-top	
+	.border-right
+	.border-bottom
+	.border-left
+	.border-0	[remove]
+	.border-primary, success, danger [colors]
+	.rounded [radius]
+	.rounded-top
+	.rounded-bottom
+	.rounded-left
+	.rounded-right
+	.rounded-circle
+	.rounded-pill
+	.rounded-lg, rounded-sm [size]
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+  <h2>Borders</h2>
+  <img src="../Images/shirt.jpg" class="border border-danger rounded-circle" width="100" height="100">
+</body>
+
+2. Display
+	d [ for display ]
+	d-{effects}
+	.d-inline	[display inline]
+	.d-block	[display block]
+	.d-none	[hide] to display use d-block
+	.d-flex
+	.d-table
+    Note: If you are designing for various screens you can use
+	d-sm-{ }	  small
+	d-md-{ }	  medium
+	d-lg-{}	  large
+	d-xl-{ }	  extra large
+ SyntaX:
+	d-sm-block
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+  <div class="form-inline">
+      Name:
+      <input type="text" class="form-control">
+      <button class="btn btn-primary">Submit</button>
+  </div>
+  <h2>Div Inline</h2>
+  <div class="d-inline">
+      Para-1
+  </div>
+  <div class="d-inline">
+      Para-2
+  </div>
+</body>
+
+3. Float
+	.float-left
+	.float-right
+	.float-none
+
+Ex:
+<div class="float-left">
+      Para-1
+  </div>
+  <div class="float-right">
+      Para-2
+  </div>
+
+4. Overflow
+	.overflow-auto
+	.overflow-hidden
+		
+Ex:
+ <div class="overflow-auto" style="width: 300px; height: 100px;">
+   ........ your text.........
+ </div>
+
+5. Position
+	.position-static
+	.position-relative
+	.position-absolute
+	.position-fixed
+	.position-stickey
+	.fixed-top	
+	.fixed-bottom
+	.sticky-top
+
+Ex:
+	<nav class="position-fixed">
+
+6. sizing
+	.w-25	width 25%
+	.w-50
+	.w-75
+	.w-100
+	.w-auto
+	.h-25	height 25%
+	.h-50
+	.h-75
+	.h-100
+	.mw-100	max width
+	.mh-100	max height
+	.vw-100	view port width
+	.vh-100	view port height
+
+      <img src="../Images/shirt.jpg" class="w-50 h-50">
+
+7. Margin and Padding
+	m	- for margin
+	p	- for padding
+	t	- for top
+	b	- for bottom
+	l	- for left
+	r	- for right
+	y	- for top and bottom
+	x	- for left and right
+   Size:
+	0	- no padding or no margin 
+	1	- .25
+	2	- .5
+	3	- 1
+	4	- 1.5
+	auto
+
+Syntax:
+	<div class="ml-2">
+	<div class="px-2">
+Ex:
+  <div  class="mx-auto" style="width: 300px;" >
+     Welcome to Bootstrap
+  </div>
+
+8. Text
+	a) Alignments
+      	.text-center
+	.text-justify
+	.text-left
+	.text-right
+	b) Wrapping
+	 .text-wrap
+	 .text-truncate [overflow:ellipse]
+Ex:
+<div class="text-truncate" style="max-width: 100px;">
+     Welcome to Bootstrap
+  </div>
+	c) Text Transform
+	    .text-lowercase
+	    .text-uppercase
+	    .text-capitalize
+	
+	d) Font 
+	    .font-weight-bold
+	    .font-weight-light
+	    .font-italic
+
+	e) TextDecoration
+	     .text-decoration-none
+	     .text-decoration-underline etc..
+
+	f) Alignments
+	     .align-top
+	     .align-center
+	     .align-middle
+	     .align-bottom
+
+	
+	
