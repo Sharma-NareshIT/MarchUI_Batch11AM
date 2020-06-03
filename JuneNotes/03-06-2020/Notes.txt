@@ -1,0 +1,114 @@
+Bootstrap Grids
+  .col
+  .col-sm-1 to col-sm-12 
+  .row
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+  <h2>Grid Style</h2>
+  <div class="row">
+     <div class="col col-sm-3">
+        Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+     </div>
+     <div class="col col-sm-9">
+        Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+        <div class="row">
+            <div class="col">
+                <img src="../Images/tshirt.jpg" width="100" height="100">
+            </div>
+            <div class="col">
+                <img src="../Images/shirt.jpg" width="100" height="100">
+            </div>
+            <div class="col">
+                <img src="../Images/shoe1.jpg" width="100" height="100">
+            </div>
+        </div>
+     </div>
+  </div>
+  <div class="row">
+    <div class="col col-sm-9">
+        Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+    </div>
+    <div class="col col-sm-3">
+        Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+    </div>
+  </div>
+</body>
+
+
+Bootstrap Images
+     .img
+     .img-thumbnail
+     .img-fluid
+<img class="img-thumbnail">
+
+Bootstrap Tables
+      .table 
+      .table-hover
+      .table-bordered
+      .table-responsive
+      .table-primary, dark, danger
+      .thead-dark, thead-light
+      .table-stripped
+      .table-borderless
+      .table-sm
+
+Ex"
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+   <table class="table table-hover table-responsive">
+       <thead class="thead-dark">
+           <tr>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Name</th>
+               <th>Price</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr class="bg-info">
+               <td>TV</td>
+               <td>34000.44</td>
+           </tr>
+           <tr class="bg-secondary">
+            <td>Mobile</td>
+            <td>23000.44</td>
+        </tr>
+        <tr>
+            <td>Shoe</td>
+            <td>3000.44</td>
+        </tr>
+        <tr>
+            <td>Laptop</td>
+            <td>34000.44</td>
+        </tr>
+       </tbody>
+   </table>
+</body> 
+
+
