@@ -1,0 +1,26 @@
+		   JavaScript 
+- JavaScript is a lightweight, interpreted or just-in-time compiled programming language.
+- Just-in-time compiler allows to translate the code native to the browser on which it is executed.
+- JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language.
+- It supports Object-Oriented, imperative and declarative or functional programming styles.
+- JavaScript is used with HTML client side
+- JavaScript is used with Node JS server side
+- JavaScript is used with MongoDb  Database
+- JavaScript is used with Flash for animations
+
+JavaScript with HTML:
+- JavaScript is used client side with HTML to reduce the burden on server.
+- JavaScript is used client side for handling validations and interactions.
+- JavaScript is used with HTML for DOM Manipulations.
+
+Evolution of JavaScript:
+- 1994 Brendan Eich - Designed a Script called Mocha for a Browser called "Netscape Communicator".
+- Later it was named as "Live Script".
+- Sun MicroSystems and Netscape named it as "JavaScript".
+- JavaScript follows the standards of ECMA.
+- JavaScript versions are know as ES5, ES6, ES8 [2018]
+
+
+
+
+
