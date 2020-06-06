@@ -1,0 +1,145 @@
+	  Integrate JavaScript with HTML 
+	 ===========================
+JavaScript functions can be 
+	a) Inline
+	b) Embeded
+	c) External File
+
+		   Inline
+		========
+- In this technique the javascript functions are written within the start tag on specific event.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>Inline</title></head>
+    <body>
+        <h2>Click Print Button to Print Page</h2>
+        <button onclick="window.print()" type="button">Print</button>
+    </body>
+</html>
+
+		Embeded
+		========
+In this technique the JavaScript functions are written in <script> element within the page <head> or <body>
+
+You can reuse the functions from any location in the page.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>Inline</title>
+    <script>
+        function PrintPage(){
+            window.print();
+        }
+    </script>
+    </head>
+    <body>
+        <h2>Click Print Button to Print Page</h2>
+        <button onclick="PrintPage()" type="button">Print</button>
+        <h2>Select Option</h2>
+        <select onchange="PrintPage()">
+            <option>Print</option>
+            <option>Print Preview</option>
+        </select>
+    </body>
+</html>
+
+		External File
+- In this technique JavaScript functions are defined in a separate Script file that have the extention ".js"
+- You access and use the functions across any page.
+- Using external file will always increase the number of requests for page and also page load time.
+
+Note: To reduce number of requests to a page you have to implement "Bundling".
+
+Ex:
+1. Add a new folder in your project
+	"Scripts"
+2. Add a new file into scripts
+	"print.js"
+function PrintPage(){
+    window.print();
+}
+
+3. Goto HTML page and link the script file
+
+    <head>
+     <script src="Scripts/print.js"></script>
+    </head>
+ <body>
+        <h2>Click Print Button to Print Page</h2>
+        <button onclick="PrintPage()" type="button">Print</button>
+        <h2>Select Option</h2>
+        <select onchange="PrintPage()">
+            <option>Print</option>
+            <option>Print Preview</option>
+        </select>
+    </body>
+
+MIME Type of JavaScript:
+======================
+- MIME is Multi purpose Internet Mail Extentions
+- MIME is media type that specifies what type of content is present in given file or element.
+- Browser can process and execute the content only when it can clearly understand the type of content.
+- You have to define MIME type for JavaScript as
+	type="text/javascript"
+	          (or)
+	  language="javascript"
+- "text/javascript" is the MIME type which is used for all javascript based libraries. i.e Jquery, Angular Js, React Js
+
+
+Syntax:
+<script type="text/javascript" src="Scripts/print.js"></script>
+<script language="javascript" src="Scripts/print.js"> </script>
+
+JavaScript Strict Mode:
+===================
+- It forces the developer to always follow coding standards.
+- It will not allow bad coding.
+- You can get the language rules from 
+	"PMD & Sonar"
+
+- You have to turn ON strict mode for JavaScript
+Ex1:
+<script type="text/javascript">
+ "use strict";
+  function f1() {
+     x = 10;		// invalid - declare x [var x]
+     document.write("x=" + x);
+  }
+  f1();
+</script>
+
+Ex2:
+<script type="text/javascript">
+  function f1() {
+     x = 10;		// valid
+     document.write("x=" + x);
+  }
+  f1();
+</script>
+
+
+JavaScript for Legacy Browser: [Old Version]
+======================================
+- Legacy browser can understand
+	HTML <4 and  < ES5
+- Legacy browser can't understand
+	HTML 5 and ES5 
+- You have design code for Legacy Browsers  for that you have to use some standard functions.
+- While writing the code always use HTML comments for Legacy Browser.
+
+Ex:
+<script type="text/javascript">
+ "use strict";
+  <!--
+    function f1() {
+      var x;
+     x = 30;
+     document.write("x=" + x);
+  }
+  f1();
+  -->
+</script>
+
