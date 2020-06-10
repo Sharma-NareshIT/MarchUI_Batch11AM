@@ -1,0 +1,138 @@
+	JavaScript Output Functions / Properties
+1. alert()
+2. confirm()
+3. document.write()
+4. console.log(), warn(), debug(), info(), error()
+5. innerHTML
+6. innterText
+7. outerHTML
+
+		alert()
+		======
+- It can display output in a message box.
+- It will not allow the user to perform any another task until or unless he confirms the message.
+- It will not allow to cancel.
+- It is mandatory to confirm with OK.
+- Even you use "esc" key it same as OK.
+
+Syntax:
+	alert("string message");
+	alert(expression);
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+         function DeleteClick(){
+            alert((10+1) + "th Record Deleted Successfully..");
+         }
+        </script>
+    </head>
+    <body>
+        <div>
+          <button type="button" onclick="DeleteClick()">Delete</button>
+        </div>
+    </body>
+</html>
+
+		confirm()
+		========
+- It is similar to alert() but allows to cancel the message.
+- confirm() uses  
+	OK	→ returns true
+	Cancel	→ returns false
+- You have to implement logic for OK and Cancel
+- It returns boolean true or false.
+	OK	- true
+	Cancel	- false
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+         function DeleteClick(){
+            var x = confirm("Are you sure want to Delete?");
+            if(x==true) {
+                alert("Record Deleted..");
+            } else {
+                alert("Canceled..");
+            }
+            
+         }
+        </script>
+    </head>
+    <body>
+        <div>
+          <button type="button" onclick="DeleteClick()">Delete</button>
+        </div>
+    </body>
+</html>
+
+
+		document.write()
+- It is used to display output on a new screen.
+- It will be on same page but in a new screen.
+- You referesh to get back to actual page.
+- It allows to configure the output with HTML.
+
+Ex:
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+         function DeleteClick(){
+            var x = confirm("Are you sure want to Delete?");
+            if(x==true) {
+                document.write("Record Deleted..<br><a href='output.html'>Back</a>");
+            } else {
+                alert("Canceled..");
+            }
+         }
+        </script>
+    </head>
+    <body>
+        <div>
+          <button type="button" onclick="DeleteClick()">Delete</button>
+        </div>
+    </body>
+</html>
+
+
+
+		innerText
+		========
+- It is a property used with HTML containers like <p> <li> <td> <hn> <div> <span> etc..
+- It can't display text with formats.
+- It is an RC data which will display the raw text without format.
+
+		innerHTML
+- It is also same as innerText. But allows formats for text.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+         function DeleteClick(){
+            var x = confirm("Are you sure want to Delete?");
+            var msg = document.getElementById("msg");
+            if(x==true) {
+                msg.innerHTML = "<font color='green'>Record Deleted..</font>";
+            } else {
+                msg.innerText = "Canceled..";
+            }
+         }
+        </script>
+    </head>
+    <body>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <h2 id="msg"></h2>
+        </div>
+        <div>
+          <button type="button" onclick="DeleteClick()">Delete</button>
+        </div>
+    </body>
+</html>
