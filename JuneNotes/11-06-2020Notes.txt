@@ -1,0 +1,139 @@
+JavaScript Output Properties and Methods
+1. alert()
+2. confirm()
+3. document.write()
+4. innerText
+5. innerHTML
+6. outerHTML
+7. console.log(), error(), debug(), info(), warn()
+
+		outerHTML
+- It is used to completely replace an element with another element in output.
+
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+         function DeleteClick(){
+            var x = confirm("Are you sure want to Delete?");
+            var msg = document.getElementById("msg");
+            if(x==true) {
+                msg.outerHTML = "<h1><font color='green'>Record Deleted..</font></h1>";
+            } else {
+                msg.innerText = "Canceled..";
+            }
+         }
+        </script>
+    </head>
+    <body>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <h2 id="msg"></h2>
+        </div>
+        <div>
+          <button type="button" onclick="DeleteClick()">Delete</button>
+        </div>
+    </body>
+</html>
+
+Note: Open Debugger F12 → Goto Elements and Observe
+	<h2> is replaced with <h1>
+
+		Console Methods
+- These are output methods used to display output in the debugger console.
+- Console provide various status methods with different status icons.
+	warn()	Warning
+	error()	Error
+	debug()	Debug
+	log()	Normal log
+	info()	Information
+
+Managing Output in Bootstrap Alerts and Modals
+-----------------------------------------------------------------------
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script>
+            function DeleteClick() {
+              document.getElementById("statusMessage").innerHTML = "Record Deleted Successfully..";
+              document.getElementById("alertBox").style.display='block';
+              document.getElementById("msg").style.display='none';
+            }
+            function bodyload(){
+                document.getElementById("alertBox").style.display = 'none';
+            }
+        </script>
+    </head>
+    <body onload="bodyload()" class="container-fluid">
+        <h2>JavaScript and Modal</h2>
+        <button class="btn btn-danger" data-toggle="modal" data-target="#msg" >Delete</button>
+        <div id="alertBox" class="alert alert-success alert-dismissible fade show">
+            <button class="close" data-dismiss="alert">X</button>
+            <h2 class="text-success" id="statusMessage"></h2>
+        </div>
+        <div class="modal fade" id="msg">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Delete Record</h2>
+                        <button class="close" data-dismiss="modal">x</button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Are you sure want to Delete?</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="DeleteClick()" class="btn btn-success">Delete</button>
+                        <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+EX: Without Bootstrap
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #msg {
+                border:2px solid green;
+                border-radius: 10px;
+                padding: 10px;
+                height: 100px;
+                background-color: lightgreen;
+                box-shadow: 2px 2px 4px green;
+                color:green;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function bodyload(){
+                document.getElementById("msg").style.display='none';
+            }
+            function DeleteClick(){
+                document.getElementById("msg").style.display='block';
+            }
+            function CloseClick(){
+                document.getElementById("msg").style.display='none';
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <button onclick="DeleteClick()">Delete</button>
+        <div id="msg">
+            <h2>Record Deleted Successfully..</h2>
+            <button onclick="CloseClick()">Close</button>
+        </div>
+    </body>
+</html>
+
+
+		Input 
