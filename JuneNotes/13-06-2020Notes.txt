@@ -1,0 +1,173 @@
+	          JavaScript Language Basics
+
+		       Variables
+- Variables are storage locations in memory, where you can store a value and use it as a part of any expression.
+- Variables configuration comprises of 
+	a) Declaration
+	b) Assignment or Rendering
+	c) Initialization
+
+- Declaration is defining the scope and name for variable.
+
+	var x;	→ declaration
+
+- Assignment is the process of assigning a value into declared variable after the declaration.
+
+	var x;	→ declaration
+	x=10;	→ Assignment / Rendering
+
+- Initialization is the process of assigning a value into declared variable at the time of declaration.
+
+	var x = 10; → Initialization
+
+- In JavaScript variables can be directly assigned with a value without declaration if it is not in strict mode.
+		          (or)
+- Declaring variable is not mandatory in JavaScript if it is not in strict mode.
+
+Syntax:
+<script>
+    function load(){
+        x = 10;	// valid
+        document.write("x=" + x);
+    }
+    load();
+</script>
+
+- Declaring or initialization of  Variable is mandatory if javascript is in Strict mode.
+
+<script>
+    "use strict";
+    function load(){
+        x = 10;		// invalid- x not defined
+        document.write("x=" + x);
+    }
+    load();
+</script>
+
+- In JavaScript variables can be declared by using following keywords
+	a) var
+	b) let
+	c) const
+
+
+Var :
+- It is used to define a function scope for variable.
+- So that it can be declared and accessed from any block in side the function.
+- Var supports declaration, rendering and initialization.
+
+Ex:
+<script>
+    "use strict";
+    function load(){
+       var x = 10;      //initialization
+       if(x==10) {
+           var y;       // declaration
+           y=30;        // rendering
+       }
+       document.write("X="+x + "<br>" + "Y="+y);
+    }
+    load();
+</script>
+
+- Var supports shadowing.
+  
+ Note: Shadowing is the process of declaring or initializing same name variable with in the scope.
+
+Ex:
+<script>
+    "use strict";
+    function load(){
+       var x = 10;
+       var x = 20;  // shadowing 
+       document.write("X=" + x);
+    }
+    load();
+</script>
+
+- Var supports Hoisting.
+
+Note: Hositing is a technique where you can use a variable before declaring it.
+
+Ex:
+<script>
+    "use strict";
+    function load(){
+       x = 10;
+       document.write("X=" + x);
+       var x;       // hoisting
+    }
+    load();
+</script>
+
+Let:
+- It is block scope.
+- It can be accessed on in the block where it is declared.
+- It allows declaration, rendering and initialization.
+
+Ex:
+<script>
+    "use strict";
+    function load(){
+       let x = 20;      // initialized
+       if(x==20) {
+           let y;       // declared
+           y=30;        // rendered
+           document.write("X=" + x + "<br>" + "Y=" + y);
+       }
+    }
+    load();
+</script>
+
+EX:
+<script>
+    "use strict";
+    function load(){
+       let x = 20;      // initialized
+       if(x==20) {
+           let y;       // declared
+           y=30;        // rendered           
+       }
+document.write("X=" + x + "<br>" + "Y=" + y); // invalid
+				        y-not defined
+    }
+    load();
+</script>
+
+- let will not allow shadowing
+
+Ex:
+<script>
+    "use strict";
+    function load(){
+      let x = 10;
+      let x = 20;   // invalid - already defined
+      document.write("x=" + x);
+    }
+    load();
+</script>
+
+- let will not allow hoisting
+
+Ex:
+<script>
+    "use strict";
+    function load(){
+      x = 20;
+      document.write("x=" + x);
+      let x;   // invalid
+    }
+    load();
+</script>
+
+const:
+- It is also block scope.
+- It will allow only initialization.
+	const x = 10; // valid
+- It will not allow declaration and rendering.
+	const x;
+	x=20;		// invalid
+- It will not allow shadowing.
+	const x = 10;
+	const x = 20; // invalid
+- It will not allow hoisting.
+	
