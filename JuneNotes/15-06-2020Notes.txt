@@ -1,0 +1,170 @@
+- Global scope for variables in JavaScript
+  * A variable declared outside functions is Global.
+  
+Ex:
+<script>
+    var x =10;      //Global
+    function f1(){
+        document.write("x in f1 is " + x);
+    }
+    function f2(){
+        document.write(`x in f2 ${x}`);
+    }
+    f1();
+    f2();
+</script>
+
+FAQ: Can we define global variable inside function?
+A. Yes.
+       a) Define variable without any keywords
+	              x=10;
+                    [but this is not valid in strict mode]
+
+        b) Define variable by using "window" object
+
+Ex:
+<script>
+    "use strict";
+    function f1(){
+        window.x =10; 
+        document.write(`x in f1 ${window.x}<br>`);
+    }
+    function f2(){
+        document.write(`x in f2 ${window.x}`);
+    }
+    f1();
+    f2();
+</script>
+
+- Variable Naming 
+   * variable name can be alpha numeric.
+   * It must start with an alphabet or an underscore
+	var _sales  = 1000;
+	var sales_2020 = 3000;
+	var 2020_sales = 3000;   // invalid
+                 var sales2020 = 4000; valid
+   * variable name can be max 255 chars long.
+   
+
+		DataTypes
+- Data Type determines the type of data that you can store in a variable.
+- JavaScript doesn't have explicit types.
+	Other Languages use explicit:
+	      int a;
+	      float b;
+- JavaScript is implicitly typed . The data type will be detemined according to the value assigned.
+
+	var x = 10;	x is number type
+	var x = "A";	x is string type
+	var x =  true;	x is boolean type
+
+	var x = 10;  - number
+	x=true;	  - boolean → it is valid in JavaScript
+
+- JavaScript variables can handle data types with are classified into
+	a) Primitive Types
+	b) Non-Primitive Types
+
+Primitive Types:
+- Primitive types are immutable.
+- Immutables are the objects whose state can't be changed once the object is created.
+- Their size can't be changed
+- They have a fixed range for values.
+- After using they are disposed.
+- JavaScript primitive types
+	a) Number
+	b) String
+	c) Boolean
+	d) Null
+	e) Undefined
+
+Number Type: A number is used to handle numeric value, which can be
+	- Signed Integer
+		var x = -10;  var x = +10;
+	- Unsigned Integer
+		var x = 10;
+	- Floating Point
+		var x = 43.56;
+	- Double
+		var x = 456.679; 
+	- Decimal
+		var x = 45600.44858586848271;  29place
+	- Exponent
+		var x = 2e3;    2x10[3] = 2000
+	- Hexadecimal	
+		var x = 0xf00d;
+	- Binary
+		var x = 0b1010;
+	- Octal
+		var x = 0o744;
+
+String Type:
+  - String is a literal with group of chars enclosed in
+	a) Double Quotes	" "
+	b) Single Quotes	' '
+	c) Back Tick	` `
+ - Double and single quotes are used for swap between innner and outer string.
+
+Ex:
+<script>
+    function f1(){
+        var link = "<a href='../home.html'>Home</a>";
+        document.write(link);
+    }
+    f1();
+</script>
+
+Ex:
+<script>
+    function f1(){
+        var link = '<a href="../home.html">Home</a>';
+        document.write(link);
+    }
+    f1();
+</script>
+  
+Back Tick allows a string with embed expression "${ }"
+
+Ex:
+<script>
+    function f1(){
+       var name = "John";
+       var age = 20;
+       document.write("Hello !"+ " " + name+ " " + "You will be"+ " " + (age+1)+ " " + "Next Year" + "<br>");
+       document.write(`Hello ! ${name} You will be ${age+1} Next Year`);
+    }
+    f1();
+</script>
+
+Escape Issues:
+ - Some special chars you defined in a string are not printable. They escape printing.
+ - You have print the non-printable chars using "\"
+
+<script>
+    function f1(){
+       var path="\"C:\\Images\\Cars\\ferrari.jpg\"";
+       document.write("path=" + path);
+    }
+    f1();
+</script>
+
+- JavaScript representation can have markup
+
+Ex:
+<script>
+    function f1(){
+       var login = `<h2>Login</h2>
+                    <dl>
+                    <dt>Name</dt>
+                    <dd><input type='text'></dd>
+                    <dt>Password</dt>
+                    <dd><input type='password'></dd>
+                    </dl>
+                    <button>Login</button>
+                    `;
+       document.write(login);
+    }
+    f1();
+</script>
+
+
