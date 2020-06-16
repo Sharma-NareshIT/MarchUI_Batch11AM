@@ -1,0 +1,95 @@
+1. number
+2. string
+3. boolean type
+4. undefined type
+5. null type
+
+		    Boolean Types
+- Boolean types can store a boolean true or false.
+- Boolean types are used in decision making.
+- They are used to control the execution flow in program.
+- JavaScript boolean types:
+	true	= 1
+	false 	= 0
+- Boolean condition can be handled by using 1 or 0.
+
+Ex:
+<script>
+    function f1(){
+        var Name="Samsung TV";
+        var InStock=false;
+        document.write(`Name=${Name}<br>Stock=${(InStock==1)?"Available":"Out of Stock"}`);
+    }
+    f1();
+</script>
+
+		undefined type
+- If a value is not defined for any variable then it will be assigned with undefined.
+- You can verify whether the value defined or not by using the keyword "undefined".
+
+Ex:
+<script>
+    function f1(){
+        var Name="Samsung TV";
+        var InStock=false;
+        document.write(`Name=${Name}<br>Stock=${(InStock==1)?"Available":"Out of Stock"}`);
+    }
+    f1();
+</script>
+
+Undefined is assigned to variable at compile time when value in not provided.
+
+		   Null Type
+- It is an exception type.
+- It indicates that there is no value defined into a reference variable during run time.
+- The null values are verified by using "null" keyword.
+
+Ex:
+<script>
+    function f1(){
+       var userName = prompt("Enter Name");
+       if(userName==null) {
+           document.write("You Canceled");
+       } else if(userName=="") {
+           document.write("Name can't be Empty");
+       } else {
+           document.write(`Hello ! ${userName}`);
+       }
+    }
+    f1();
+</script>
+
+	      Non-Primtive Types
+- They are Mutable
+- Mutable is type of variable that can be changed.
+- They don't have fixed size.
+- Their size varies.
+- JavaScript Non-Primitive Types are	
+	1. Array
+	2. Object
+	3. Regular Expression
+	4. Date
+
+	        JavaScript Array Type
+	        ==================
+What is the purpose of Array in Computer Programming?
+- Arrays are used in computer programming to 
+	a) reduce overhead
+	b) reduce complexity
+
+- Array can reduce overhead by storing values in sequential order.
+- Array can reduce complexity by storing multiple value under one name.
+- Array can store any type of values in sequential order.
+- Array can change its size dynamically.
+- Array can handle the behavior of
+	stack, queue
+
+
+
+
+
+
+
+
+
+
