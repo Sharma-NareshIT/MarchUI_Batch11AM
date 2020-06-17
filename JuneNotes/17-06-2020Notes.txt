@@ -1,0 +1,158 @@
+Declaring and Initializing Memory for Array:
+
+- Array memory can be initialized by using
+	a) Array Meta character "[ ]"
+	b) Array Constructor "Array()"
+
+  Syntax:
+	let products = [ ];
+	let products = new Array();
+
+Ex:
+<script>
+    function f1() {
+        var products;
+        products[0]=10;
+        products[1]=20;
+        products[2]=30;
+        document.write(products[0]);   - error: 0 undefined
+    }
+    f1();
+</script>
+
+EX:
+<script>
+    function f1() {
+        var products = [];  // initialize memory
+        products[0]=10;
+        products[1]=20;
+        products[2]=30;
+        document.write(products[0]);   // valid
+    }
+    f1();
+</script>
+
+Ex:
+<script>
+    function f1() {
+        var products;
+        products = [];   // assignment of memory
+        products[0]=10;
+        products[1]=20;
+        products[2]=30;
+        document.write(products[1]);
+    }
+    f1();
+</script>
+
+- Array values can be defined and accessed by using properties. The property is a string type with the same name as index name.
+
+Ex:
+<script>
+    function f1() {
+        var products;
+        products = [];   // assignment of memory
+        products["0"]= "TV";
+        products["1"]= "Mobile";
+        products["2"]= 30;
+        document.write(products["1"]);
+    }
+    f1();
+</script>
+
+
+Ex:
+<script>
+    function f1() {
+        var products = ["TV","Mobile","Shoe"];
+        for(var property in products) {
+            document.write(`${property} [${typeof property}] : ${products[property]}<br>`);
+        }
+    }
+    f1();
+</script>
+
+- In Array memory you can store any type of value i.e a primitive type or a non primitive type or even a function.
+
+Ex:
+<script>
+    function f1() {
+        var sampleArray = [10, "John", true, [] , function(){} ];
+        sampleArray[3] = ["TV", "Mobile"];
+        sampleArray[4] = function() {
+            document.write("Function in Array");
+        }
+        for(var item of sampleArray[3]) {
+            document.write(item + "<br>");
+        }
+    }
+    f1();
+</script>
+
+
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input[type="range"] {
+                height: 40px;
+                width: 400px;
+            }
+        </style>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../Fonts/css/all.css">
+        <script type="text/javascript">
+            var products = ["../Images/earpods.jpg","../Images/jeans.jpg","../Images/shoe.jpg","../Images/shirt.jpg","../Images/jblspeaker.jpg"];
+         
+            function GetImage(index){
+                document.getElementById("pic").src= products[index];
+            }
+          
+            function bodyload(){
+               GetImage(0);
+            }
+            function SlideShow(){
+                var txtRange = document.getElementById("txtRange").value;
+                GetImage(txtRange);
+            }
+            var count=0;
+            function PreviousClick(){
+                count--;
+                GetImage(count);
+                document.getElementById("txtRange").value = count;
+            }
+            function NextClick(){
+                count++;
+                GetImage(count);
+                document.getElementById("txtRange").value=count;
+            }
+        </script>
+    </head>
+    <body onload="bodyload()" class="container-fluid">
+        <h2 class="text-primary text-center">Amazon Shopping</h2>
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-2">
+                        <button onclick="PreviousClick()" class="btn btn-outline-danger">
+                            <span class="fa fa-chevron-left"></span>
+                        </button>
+                    </div>
+                    <div class="col-8">
+                        <img id="pic" width="200" height="200">
+                    </div>
+                    <div class="col-2">
+                        <button onclick="NextClick()" class="btn btn-outline-danger">
+                            <span class="fa fa-chevron-right"></span>
+                            </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <input onchange="SlideShow()" id="txtRange" type="range" min="0" max="4" value="0">
+            </div>
+        </div>
+    </body>
+</html>
