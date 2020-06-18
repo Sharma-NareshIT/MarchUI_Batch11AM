@@ -1,0 +1,284 @@
+		Array Manipulations
+Reading Values from Array:
+
+Function		Description
+=================================
+toString()	        Returns values separated with coma
+join()	        Return values separated with custom 	        delimeter. [your own separator]
+filter()	        It can search of a value based on condition.
+	        It returns all values matching condition.
+find()	        It returns only first occurance based on
+	        condition.
+slice()	        It can read values based on index references
+	        between specified range.
+
+
+Ex:
+<script>
+    function f1(){
+        var products = ["TV", "Mobile","Shoe"];
+        document.write(products.toString());
+    }
+    f1();
+</script>
+
+
+Ex:
+    <script>
+        function f1(){
+            var products = ["TV", "Mobile","Shoe"];
+            document.write(products.join("-->"));
+        }
+        f1();
+    </script>
+
+Ex:
+    <script>
+        function f1(){
+            var values = [3000, 2000, 5000, 6000];
+            document.write(values.find(function(val){return val<5000}));
+        }
+        f1();
+    </script>
+
+Ex:
+    <script>
+        function f1(){
+            var values = [3000, 2000, 5000, 6000];
+            document.write(values.filter(function(val){return val<=5000}));
+        }
+        f1();
+    </script>
+
+
+Ex:
+    <script>
+        function f1(){
+            var values = [3000, 2000, 5000, 6000];
+            document.write(values.slice(1,3));
+        }
+        f1();
+    </script>
+
+You can use loops and iterations:
+
+Ex:
+    <script>
+        function f1(){
+            var values = [3000, 2000, 5000, 6000];
+            for(var i=0; i<values.length; i++) {
+                document.write(values[i]  + "<br>");
+            }
+        }
+        f1();
+    </script>
+
+Ex:
+    <script>
+        function f1(){
+            var values = ["A","B","C"];
+            for(var item of values) {
+                document.write(item + "<br>");
+            }
+        }
+        f1();
+    </script>
+
+
+Add Values into Array:
+===================
+
+push()		It will add new values as last elements.
+unshift()		It will add new values as first elements.
+splice()		It will add at specific position.
+
+
+Ex:
+    <script>
+        function f1(){
+            var values = ["A","B","C"];
+            values.push("D","E");
+            document.write(values.toString());
+        }
+        f1();
+    </script>
+
+
+Ex:
+    <script>
+        function f1(){
+            var values = ["A","B","C"];
+            values.unshift("D","E");
+            document.write(values.toString());
+        }
+        f1();
+    </script>
+
+Ex:
+    <script>
+        function f1(){
+            var values = ["A","B","C"];
+            values.splice(2,0,"D","E");
+            document.write(values.toString());
+        }
+        f1();
+    </script>
+
+Removing Values from Array:
+
+pop()	It removes the last item
+shift()	It removes the first item
+splice()	It removes any specific item
+
+arrayName.pop()
+arrayName.shift()
+arrayName.splice(startIndex, CountOfItemsToRemove)
+
+Ex:
+    <script>
+        function f1(){
+            var values = ["A","B","C"];
+            values.splice(1,1);
+            document.write(values.toString());
+        }
+        f1();
+    </script>
+
+		   Object Type
+- Object comprises of data and logic.
+- Data is in properties 
+- Logic is in functions
+- Object properties and function are defined in { }
+- The members of object are accessible with in the object by using "this" keyword.
+- The members of object are accessible outside the object by using object name.
+- Object allow code reusability
+
+
+Ex:
+    <script>
+        function f1(){
+            var product = {
+                Name: "",
+                Price: 0,
+                Qty:0,
+                Total:function(){
+                    return this.Qty * this.Price;
+                },
+                Print:function(){
+                    document.write(`Name=${this.Name}<br>Price=${this.Price}<br>Qty=${this.Qty}<br>Total=${this.Total()}<br>`);
+                }
+            }
+            product.Name="Samsung TV";
+            product.Price=45000.55;
+            product.Qty=2;
+            product.Print();
+            document.write("-----------------<br>");
+            product.Name="Nike Casuals";
+            product.Price=2000.44;
+            product.Qty=2;
+            product.Print();
+        }
+        f1();
+    </script>
+
+
+		   Array of Objects
+		  JSON - JavaScript Object Notation
+
+Ex:
+    <script>
+        function f1(){
+           var products= [
+               {Name:"TV", Price:45000.55},
+               {Name:"Mobile", Price:12000.33}
+           ];
+           for(var product of products) {
+               document.write(`${product.Name}-${product.Price}<br>`)
+           }
+        }
+        f1();
+    </script>
+
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input[type="range"] {
+                height: 40px;
+                width: 400px;
+            }
+        </style>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../Fonts/css/all.css">
+        <script type="text/javascript">
+            
+            var products = [
+                {Name: "JBL Speaker", Price: 4000.55, Photo:"../Images/jblspeaker.jpg"}, //0
+                {Name: "Nike Casuals", Price: 2000.55, Photo:"../Images/shoe.jpg"},      //1
+                {Name: "Shirt", Price: 5000.55, Photo:"../Images/shirt.jpg"},            //2
+                {Name: "Jeans", Price: 3000.55, Photo:"../Images/jeans.jpg"},            //3
+                {Name: "T-Shirt", Price: 1000.55, Photo:"../Images/tshirt.jpg"},         //4
+            ]
+
+            function GetImage(index){
+                document.getElementById("pic").src= products[index].Photo;
+                document.getElementById("lblName").innerHTML = products[index].Name;
+                document.getElementById("lblPrice").innerHTML = "&#8377;" + products[index].Price;
+            }
+          
+            function bodyload(){
+               GetImage(0);
+            }
+            function SlideShow(){
+                var txtRange = document.getElementById("txtRange").value;
+                GetImage(txtRange);
+            }
+            var count=0;
+            function PreviousClick(){
+                count--;
+                GetImage(count);
+                document.getElementById("txtRange").value = count;
+            }
+            function NextClick(){
+                count++;
+                GetImage(count);
+                document.getElementById("txtRange").value=count;
+            }
+        </script>
+    </head>
+    <body onload="bodyload()" class="container-fluid">
+        <h2 class="text-primary text-center">Amazon Shopping</h2>
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-2">
+                        <button onclick="PreviousClick()" class="btn btn-outline-danger">
+                            <span class="fa fa-chevron-left"></span>
+                        </button>
+                    </div>
+                    <div class="col-8">
+                        <h3 id="lblName"></h3>
+                        <img id="pic" width="200" height="200">
+                        <h3 id="lblPrice"></h3>
+                    </div>
+                    <div class="col-2">
+                        <button onclick="NextClick()" class="btn btn-outline-danger">
+                            <span class="fa fa-chevron-right"></span>
+                            </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <input onchange="SlideShow()" id="txtRange" type="range" min="0" max="4" value="0">
+            </div>
+        </div>
+    </body>
+</html>
+
+
+		Regular Expression
+
+
+
