@@ -1,0 +1,207 @@
+Regular Expression Type:
+- Regular expression is used to verify the format of input value.
+- It uses a pattern with meta characters and quantifiers.
+- A regular expression is defined in "/expression/"
+- Value is compared with regular expression by using "match()" function.
+
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            function VerifyPassword(){
+                var password = document.getElementById("txtPwd").value;
+                var regExp=/(?=.*[A-Z])\w{4,15}/;
+                var msg = document.getElementById("msg");
+                if(password.match(regExp)) {
+                    msg.innerHTML = "Strong Password";
+                    msg.className = "text-success";
+                } else {
+                    if(password.length<4) {
+                        msg.innerHTML= "Poor Password";
+                        msg.className= "text-danger";
+                    } else {
+                        msg.innerHTML="Weak Password";
+                        msg.className="text-warning";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <h2>Verify Password</h2>
+        <input onkeyup="VerifyPassword()" type="password" id="txtPwd" class="form-control" placeholder="4 to 15 chars with 1 upppercase letter">
+        <span id="msg"></span>
+    </body>
+</html>
+
+Primitive Types
+- number
+- string
+- boolean
+- null
+- undefined
+
+Non-Primitive Types
+- Array
+- Object
+- Regular Expression
+- Date
+
+
+
+		Date Type
+- JavaScript date values can be stored in Date type memory allocated by Date() constructor.
+
+- By default the current date is loaded into memory.
+- You can add custom date.
+- Date value in memory must be a string with "YY-MM-DD" format.
+
+ Syntax:
+	var yourDate = new Date("2020-04-20");
+
+- You can access date dynamically by using following functions
+
+Function		Description
+-----------------------------------------------------------------------------------
+getHours()	returns hour number 0 to 23
+getMinutes()	minutes number 0-59
+getSeconds()	seconds number 0-59
+getMilliSeconds()	milliseconds number 0-999
+getDay()		return weekday number 0-6
+		0=sunday
+getMonth()	return month number 0-11
+		0-January
+getDate()		return date number  ex: 19
+getFullYear()	return complete year number.
+
+toDateString()	]
+toLocaleDateString()]	various date & time formats
+toTimeString()	]
+toLocaleTimeString()]
+
+Ex:
+<script>
+    function f1() {
+        var product = {
+            Name: "Samsung TV",
+            Price: 45000.55,
+            Mfd: new Date("2020-02-10")
+        };
+        document.write(`Name=${product.Name}<br>Price=${product.Price}<br>Manufactured=${product.Mfd.toDateString()}`);
+    }
+    f1();
+</script>
+
+Ex:
+<script>
+    function f1() {
+        var product = {
+            Name: "Samsung TV",
+            Price: 45000.55,
+            Mfd: new Date()
+        };
+        var weekdays = ["Sunday","Monday","Tue","Wed","Thu","Friday","Sat"];
+        var months = ["Jan","Feb","Mar","Apr","May","June","July"];
+        document.write(`Manufactured Month=${months[product.Mfd.getMonth()]}<br>WeekDay=${weekdays[product.Mfd.getDay()]}<br>Date=${product.Mfd.getDate()}<br>Year=${product.Mfd.getFullYear()}`);
+    }
+    f1();
+</script>
+
+- You can dynamically set values by using following functions
+
+setDate()		sets the day of the month.
+setFullYear()	sets year
+setHours()
+setMinutes()
+setSeconds()
+setMilliseconds()
+setMonth()
+
+Note: date is possible from Jan-1 1970 to 9999
+
+
+Ex:
+<script>
+    function f1() {
+        var product = {
+            Name: "Samsung TV",
+            Price: 45000.55,
+            Mfd: new Date()
+        };
+        product.Mfd.setDate(20);
+        product.Mfd.setMonth(2);
+        product.Mfd.setFullYear(2019);
+        document.write(`Manufactured=${product.Mfd.toDateString()}`);
+    }
+    f1();
+</script>
+
+	         Operators in JavaScript
+- Operator is an object used to evaluate a value based on the data from operands and the symbol specified.
+
+	leftOperand  symbol  rightOperand
+	        x      	         +   	    y
+
+- Operators are used in building expression that evaluate a value.
+
+- Operators are classified into various types based on number operands they can handle
+	a) Unary Operator	: One Operand
+		x++
+	b) Binary Operator	: Two operands
+		x + y
+	c) Ternary Operator	: Three operands 
+		 [?:]
+		(condition)?true:false
+
+- Operators are classified into several types based on the type of value they return
+	1. Arithematic Operators
+	2. Assignment Operators
+	3. Comparision Operators
+	4. Bitwise Operators
+	5. Logical Operators
+	6. Special Operators
+
+
+Arithematic Operators
++ 	Addition
+-	Subtraction
+*	Multiplication
+/	Division
+%	Modulus division remainder
+**	Power value - Exponentation ES6
+++	Increment
+--	Decrement
+
+
+Ex:
+<script>
+    function f1() {
+        document.write(`${Math.pow(2,3)}<br>`);
+        document.write(`${2**3}`);
+    }
+    f1();
+</script>
+
+Ex: Increment  and Decrement
+        
+Post Increment/Decrement: First it assigns to Y and then increment or decrement.
+
+	x = 10;
+	y = x++;		x=11, y=10
+	y = x--;		x =9, y=10;
+
+Pre Increment/Decrement: First it increment or decrement  and then assign.
+
+	x=10;
+	y=++x;		x=11    y=11
+	y=--x;		x=9, y=9
+
+
+
+	
+
+
+
