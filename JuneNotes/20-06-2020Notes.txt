@@ -1,0 +1,228 @@
+Arithematic Operators
+Assignment Operators
+=	Equal
++=	Add and assign
+-=
+*=
+/=
+%=
+**=
+
+Syntax:
+	var x = 10;
+	var y = 20;
+	x = x + y;      → x+=y
+	x = x * y;	    → x*=y
+
+Comparision Operators
+----------------------------------
+==		Equal To
+===		Identical Equal
+!=		Not equal
+!==		Not Identical
+>		Greater than
+< 		less than
+>=		greater than or equal
+<=		less than or equal
+
+Ex:
+	var x = "10";
+	var y = 10;
+	document.write(x==y);    ? true
+	
+==   It can convert and compare.
+===  It compares both values without converting.
+
+	document.write(x===y);  ? false
+
+Ex:
+<script>
+    function f1() {
+       var x = 10;
+       var y = "10";
+       document.write(`x==y ? ${x==y}<br>`);	true
+       document.write(`x===y ? ${x===y}`);		false
+    }
+    f1();
+</script>
+
+Logical Operators
+
+&&	Logical AND	true when all expressions
+			evaluate to true.
+||	Logical OR	true when at least one 			expression evaluates to true.
+
+!	Logical NOT	Negation
+
+Syntax:
+var x = 10;
+var y = 20;
+	
+x>y || x<y          → true
+x>y && x<y       → false
+x<y && x==10   → true
+
+Syntax:
+ var x = true;
+ var y = !x;
+
+ x = true, y=false
+
+Bitwise Operators
+
+&	AND
+|	OR
+~	NOT
+^	XOR
+<<	Zero fill left shift
+>> 	Signed right shift
+>>>	Zero fill right shift
+
+
+	 JavaScript Special Operators
+1. typeof   : It returns the data type of variable.
+
+<script>
+    function f1() {
+       var product = {
+           Name: "TV",
+           Price: 45000.55,
+           Stock:true
+       };
+       document.write(`Name is ${typeof product.Name}<br>Price is ${typeof product.Price}<br>Stock is ${typeof product.Stock}`);
+    }
+    f1();
+</script>
+
+            var  products = ["TV", "Mobile"];
+            document.write(typeof products);    ? object
+            var products = { } ;     ?  object
+            var regExp = / /;          ?   object
+            var add = function(){ } ?   function
+            var data= [{ }, { }];        ?   object
+            var mfd = new Date();  ?   object
+
+
+2. instanceof  : It checks whether the given object is derived
+	         from specified class and return boolean true
+	         or false.
+
+Syntax:
+       objectName  instanceof   ClassName
+
+Ex:
+<script>
+    class Employee {
+
+    }
+    function f1() {
+       var products =  new Array();
+       var emp = new Employee();
+       document.write(`emp is instance of Array : ${emp instanceof Array} <br> emp instance of Employee : ${emp instanceof Employee}<br>Products is instance of Array : ${products instanceof Array}`)
+    }
+    f1();
+</script>
+
+3. delete  : It is used to delete any property from object.
+	 you can't delete properties of built-in objects.
+
+Ex:
+<script>
+    function f1() {
+       var product = {
+           Name:"Samsung TV",
+           Price: 45000.55
+       };
+       delete product.Price;
+       if(product.Price==undefined) {
+           document.write(`Name=${product.Name}`);
+       } else {
+       document.write(`Name=${product.Name}<br>Price=${product.Price}`);
+       }
+    }
+    f1();
+</script>
+
+
+	delete Math.PI;	// invalid - Math is built-in
+
+4. in operator : It check whether the given property is a member of specificed object and return true or false.
+
+Syntax:
+	"PropertyName"  in ObjectName
+
+Ex:
+<script>
+    function f1() {
+       var product = {
+           Name:"Samsung TV",
+           Price: 45000.55,
+          // Photo: "../Images/tv.jpg"
+       };
+       document.write(`Is Photo a Member of Product ? ${'Photo' in product}`);
+    }
+    f1();
+</script>
+
+5. of operator  : It is used to read all values from a collection
+	          with the help of iterator. 
+	         It requires an iterator.
+
+Ex:
+<script>
+    function f1() {
+      var products = ["TV", "Mobile", "Shoe"];
+      for(var item of products) {
+            document.write(item + "<br>");
+      }
+    }
+    f1();
+</script>
+
+
+Ex:
+<script>
+    function f1() {
+      var product = {
+          Name: "TV",
+          Price: 45000.55,
+          IsStock:true
+      };
+      for(var property in product) {
+          document.write(`${property} : ${product[property]}<br>`);
+      }
+    }
+    f1();
+</script>
+
+6. Ternary Operator	
+	? :
+	(condition)?trueStatement:falseStatement
+
+Ex:
+<script>
+    function f1() {
+      var product = {
+          Name: "TV",
+          Price: 45000.55,
+          IsStock:false
+      };
+      for(var property in product) {
+          document.write(`${property} : ${product[property]}<br>`);
+      }
+      document.write(`Stock ${(product.IsStock==true)?"Available":"Out of Stock"}`)
+    }
+    f1();
+</script>
+
+7. void operator : It is used for functions that doesn't return any value.
+
+          <a> Home </a>        ? invalid ? 
+          <a href=""> Home </a> ? invalid
+          <a href="#"> Home </a> ? invalid
+          <a href="javascript:void()"> Home </a>
+ 
+Ex:
+<a href="javascript:void(document.body.style.backgroundColor='Yellow')">Home</a>
+
+		Statements
